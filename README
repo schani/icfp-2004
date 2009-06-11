@@ -1,0 +1,38 @@
+Building requires OCaml and SDL.
+
+Build with
+
+	./make.sh
+
+Run with
+
+	./run2.sh data/sample2.world submission/solution-1.ant submission/solution-2.ant
+
+In the visualizer, press "End", then "2", then "Space".  Other things
+you can do in the visualizer:
+
+       Left/right/middle mouse button	zooming/panning
+       Numpad +/-		 	zooming
+       Numpad /				small grid
+       Numpad *				large grid
+
+       Cursor keys			scrolling
+       Home				center view
+       End				fit view
+
+       Numpad digits			toggle visialization mask
+
+       q/a				step forward/back
+       w/s				round forward/back
+       e/d				10 rounds forward/back
+       r/f				100 rounds forward/back
+       t/g				1000 rounds forward/back
+       y/h				10000 rounds forward back
+
+       Space				toggle animation
+       1				stop animation
+       2				slow animation
+       3				fast animation
+       4				faster animation
+
+       Esc				quit
