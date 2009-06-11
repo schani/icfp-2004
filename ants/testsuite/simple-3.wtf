@@ -1,0 +1,30 @@
+# Simple test file. ant moving to the right.
+# this time there is a round marker at the beginning.
+# this time ant runs into rock.
+# this time ant sets markers.
+#
+0 0 mf 0
+0 0 s0 0 
+0 0 mf 0
+0 0 s0 0 
+0 0 mf 0
+0 0 s0 0 
+0 0 mf 0
+0 0 s0 0 
+0 0 mf 0
+0 0 s0 0 
+#
+0 0 tl 0 
+0 0 tl 0 
+0 0 tl 0
+#
+0 0 mf 0
+0 0 c0 0 
+0 0 mf 0
+0 0 c0 0 
+0 0 mf 0
+0 0 c0 0 
+0 0 mf 0
+0 0 c0 0 
+0 0 mf 0
+0 0 c0 0 

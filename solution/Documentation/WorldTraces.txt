@@ -1,0 +1,67 @@
+This file documents the internal format for world traces. This format
+is used to interface between the simulator and the vizualisation driver. 
+
+The format is text and line based. It consists of three types of lines:
+
+	The world map: This is dumped at the beginning of the file. 
+           The format is the same as in the ICFP specification.
+	   There is no end-of-world delimiter since the ending is 
+           determined by the number of lines. 
+ 
+        The ant actions: these describe the actions of the ants 
+           (movement, turn, pickup food and so on). 
+
+        Comments: These are used for various purposes, see below.
+
+
+Each ant is identified by two numbers: 
+
+	A colony: this is 0 for red team, 1 for black team
+	An id: this is unique for each ant of one team and starts at 0
+
+Note that the vizualisation driver is not limited to two teams, so
+in theory there could be any number of teams batteling. 
+
+Each line consists of four items separated by spaces:
+
+<colony> <id> <action> <new-state>
+
+Action is a string consisting of two characters. The following are defined:
+
+	mf .. move forward
+	tl .. turn left
+	tr .. turn right
+	pf .. pickup food 
+	df .. drop food
+	sn .. set marker #n where n is one of 0-5 (example s3 clears marker #3) 
+	cn .. clear marker #n where n is one of 0-5 (example c3 clears marker #3)
+
+new-state is a number that represents the ant's new state in the state machine. It is used for debugging purposes. 
+
+Example: 
+
+0 0 mf 1  # First ant of red team moves forward and changes to state 1
+1 0 s2 2  # First ant of black team sets marker #2 and changes to state 2
+
+Everything after '#' is ignored, unless the '#' is the first character 
+in the line. A '#' alone on a line is used to indicate that one round is 
+over. In the vizualisation one can step forward and backward roundwise, 
+or just one step at a time.
+
+All other lines starting with a # are used for the simulator
+or a higher level program (such as the state machine compiler) to 
+communicate directly with the output driver. For example, the meaning of
+the markers can be passed to a graphical output driver to enable the
+state machine coders to use specific colors for different marker values. 
+
+Comments are also used for restoring an intermediate world state. 
+
+To be defined. Should be possible to conveniently set food at position, 
+set markers at position and make ants 'jump' to their current state. 
+
+
+The vizualisation driver maintains a history of the world trace, which allows
+the user to interactively move steps forward and backward to analyse 
+the trace.   
+
+

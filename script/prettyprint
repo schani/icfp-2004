@@ -1,0 +1,32 @@
+#!/bin/bash
+
+LOGFILE=$1
+ARGV0=$(basename $0)
+
+if [ $# != 1 ]
+then
+	echo "$ARGV0: usage: $ARGV0 <play output>">/dev/stderr
+	exit 1
+fi
+
+[ -f $LOGFILE ] || {
+	echo "$ARGV0: no such file: $LOGFILE">/dev/stderr
+	exit 2
+}
+
+TMPFILE=$(mktemp)
+rm -f $TMPFILE
+
+cat $LOGFILE | ./align-1.7.0/align | sort
+LINECOUNT=$(wc -l $LOGFILE)
+
+rm -f $TMPFILE
+for winner in $(awk '{print $6}' < $LOGFILE | sort -u)
+do
+    echo $winner: $(egrep -c "$winner$" $LOGFILE) >> $TMPFILE
+done
+echo Winner statistics:
+sort -k 2 -n -r < $TMPFILE | ./align-1.7.0/align
+
+rm -f $TMPFILE
+

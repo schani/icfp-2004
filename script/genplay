@@ -1,0 +1,64 @@
+#!/bin/bash 
+
+ARGV0=$0
+
+BASENAME=maptest
+FILELIMIT=4
+
+function die {
+    echo "$ARGV0: fatal error: $1" > /dev/stderr
+    exit 2
+}
+
+function usage {
+    echo "$ARGV0: usage: $ARGV0 <ant> | <map> [..]"
+    exit 1
+}
+
+function noover {
+	[ -f $1 ] && {
+		echo cowardly refusing to overwrite file: $BASENAME.1 > /dev/stderr
+		exit 3
+	}
+}
+
+noover $BASENAME.1
+
+WORLDLIST=""
+ANTLIST=""
+while [ $# != 0 ]
+do
+    case $1 in
+    *.ant)   ANTLIST="$ANTLIST $1";;
+    *.world) WORLDLIST="$WORLDLIST $1";;
+    *) usage;;
+    esac
+    shift
+done
+
+ACTNR=1
+LINES=0
+function addgame () {
+	if [[ $LINES == $FILELIMIT ]]
+	then
+		let ACTNR++
+		LINES=1
+		noover $BASENAME.$ACTNR
+	else
+		let LINES++
+	fi
+	echo "$*" >> $BASENAME.$ACTNR
+}
+
+for world in $WORLDLIST
+do
+    for ant1 in $ANTLIST
+    do
+	for ant2 in $ANTLIST
+	do
+	    [ "$ant1" = "$ant2" ] && continue
+	    addgame ./play $world $ant1 $ant2
+	done
+    done
+done
+

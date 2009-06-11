@@ -1,0 +1,116 @@
+Funktion im Kopf der Mensch
+Heinz Deinhart
+heinz@auto.tuwien.ac.at
+
+Mark Probst                schani@complang.tuwien.ac.at
+Martin Biely               mb@auto.tuwien.ac.at
+Bernd Thallner             thallner@ecs.tuwien.ac.at
+Herbert Poetzl             herbert@13thfloor.at
+Johannes Thomas
+Franz Ackermann
+Dieter Etz
+Tatjana Svizensky          tatjana@13thfloor.at
+
+Ant Strategy
+============
+
+Our ant is called Winston-Rachdi, due to the fact that it has two
+modes of operation, namely Winston and Rachdi.
+
+At the start of simulation, six ants become Winstons, the others
+become Rachdis.  The job of the Winstons is to defend the anthill and
+the food on the anthill.  The Rachdis simply roam the land and search
+for food.  Over time, some Rachdis become Winstons, to make up for the
+possible death of some Winstons and due to the fact that later on in
+the game, it becomes more important to defend the anthill.
+
+The Winston strategy is to gather all food that is deposited in the
+anthill and to store it in two corners, which are always guarded by
+Winstons who stand there.  The other Winstons roam the corner of the
+base and pick up any food, moving it to the corners (which is possible
+because the corner Winstons move away as soon as they sense a Winston
+with food approaching them).
+
+A Rachdi walks out of the anthill more or less randomly and marks the
+way back to anthill (see below for details on marking).  If it finds
+food, it picks it up and returns to the base, while marking the way
+back as a food trace.  If a Rachdi is looking for food and finds a
+food trace, it follows that trace until it finds food.  If it does not
+find food at the end of the trace, it walks back the trace and deletes
+the food mark.  If a Rachdi gets stuck for some time (determined
+randomly), it switches to a fallback strategy which usually involves
+walking about randomly and looking for traces.
+
+Rachdis always mark the way back to the anthill by using three markers
+(bits) to code the direction back to base.  The three bits (0-2) are
+interpreted as an integer, with the value 0 meaning no direction, 1 to
+6 meaning the direction 0 to 5 as in the Task Description and 7 not
+being used.  An additional bit (3) is used to mark a trace leading to
+food.  Great care is taken not to mark in a way leading to cycles.
+
+Note that an encoded direction can only be used unambiguously to find
+back to the anthill, but not from the anthill to the food source.
+It's not very difficult, however, to walk a food trace in the opposite
+direction when we take into account that we must never go back, never
+move to a field which hasn't got the food bit set and only move to a
+field which directly points to the field we are standing at, i.e., the
+current field must be the one that someone walking back to the anthill
+from the destination field would move to next).
+
+
+Ant Creation Tools
+==================
+
+We write our ants in a custom-designed language called Liesegang, and
+compile them to state machine code.  Liesegang supports structured
+programming and can be extended with macros coded in Lisp.  One
+important Liesegang feature is the possibility to carry state, i.e.,
+to have variables which can be read and set.  We use a state called
+`dir' to remember the direction our ant is currently heading.  Of
+course, state can only be implemented in state machine code by
+duplicating code.
+
+The Liesegang compiler generates quite a lot of state machine gotos
+(sense commands with both targets jumping to the same state), dead and
+duplicate code.  We have an optimizer which removes them, not only
+making the state machine smaller but also more efficient, hence making
+ants think faster.
+
+
+Ant Debugging Tools
+===================
+
+We have a simulator which can output a trace (in a custom format)
+which is read by a visualization tool which we use to monitor ant
+behaviour.
+
+
+Languages Used
+==============
+
+Liesegang: The ants are written in Liesegang.
+
+Common Lisp: The Lisegang compiler and the Liesegang extensions
+(macros) are written in Common Lisp.
+
+OCaml: The simulator and the optimizer are written in OCaml.
+
+C: The visualizer is written in C.
+
+
+Why is the Team called `Funktion im Kopf der Mensch'?
+=====================================================
+
+`Funktion im Kopf der Mensch' are the words of the prophet.
+
+
+Why is `Rachdi' called `Rachdi'?
+================================
+
+Rachdi is the name of the prophet.
+
+
+Why is `Winston' called `Winston'?
+==================================
+
+We shall defend our Island, whatever the cost may be.

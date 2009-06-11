@@ -1,0 +1,148 @@
+Flip 10 1 2   ; state 0
+Sense Ahead 62 62 Friend   ; state 1
+Sense Ahead 3 3 Friend   ; state 2
+Sense Ahead 4 4 Friend   ; state 3
+Sense Ahead 5 14 Food   ; state 4
+Sense Ahead 13 6 Home   ; state 5
+Move 10 7   ; state 6
+Flip 5 8 9   ; state 7
+Sense Ahead 10 10 Friend   ; state 8
+Turn Right 6   ; state 9
+Sense Ahead 11 11 Friend   ; state 10
+PickUp 12 12   ; state 11
+Sense Ahead 48 48 Friend   ; state 12
+Sense Ahead 41 41 Friend   ; state 13
+Sense RightAhead 15 23 Food   ; state 14
+Turn Right 16   ; state 15
+Move 20 17   ; state 16
+Flip 5 18 19   ; state 17
+Sense Ahead 20 20 Friend   ; state 18
+Turn Right 16   ; state 19
+Sense Ahead 21 21 Friend   ; state 20
+PickUp 22 22   ; state 21
+Sense Ahead 48 48 Friend   ; state 22
+Sense Ahead 41 41 Friend   ; state 23
+Sense LeftAhead 25 35 Food   ; state 24
+Sense LeftAhead 34 26 Home   ; state 25
+Turn Left 27   ; state 26
+Move 31 28   ; state 27
+Flip 5 29 30   ; state 28
+Sense Ahead 31 31 Friend   ; state 29
+Turn Left 27   ; state 30
+Sense Ahead 32 32 Friend   ; state 31
+PickUp 33 33   ; state 32
+Sense Ahead 48 48 Friend   ; state 33
+Sense Ahead 41 41 Friend   ; state 34
+Turn Left 36   ; state 35
+Move 40 37   ; state 36
+Flip 3 38 39   ; state 37
+Turn Right 36   ; state 38
+Turn Left 36   ; state 39
+Sense Ahead 3 3 Friend   ; state 40
+Sense Ahead 42 42 Friend   ; state 41
+Flip 2 43 44   ; state 42
+Turn Left 46   ; state 43
+Turn Right 45   ; state 44
+Turn Right 46   ; state 45
+Move 47 47   ; state 46
+Sense Ahead 3 3 Friend   ; state 47
+Sense Ahead 49 49 Friend   ; state 48
+Sense Ahead 58 50 Home   ; state 49
+Move 54 51   ; state 50
+Flip 3 52 53   ; state 51
+Turn Left 55   ; state 52
+Turn Right 55   ; state 53
+Move 55 55   ; state 54
+Flip 3 56 57   ; state 55
+Turn Left 49   ; state 56
+Turn Right 49   ; state 57
+Move 59 59   ; state 58
+Drop 60   ; state 59
+Turn Right 61   ; state 60
+Sense Ahead 41 41 Friend   ; state 61
+Sense Ahead 63 63 Friend   ; state 62
+Sense Ahead 64 136 FoeHome   ; state 63
+Move 78 65   ; state 64
+Sense LeftAhead 66 73 FoeHome   ; state 65
+Turn Left 67   ; state 66
+Move 68 71   ; state 67
+Flip 6 69 70   ; state 68
+Turn Left 72   ; state 69
+Turn Right 72   ; state 70
+Sense Ahead 72 72 Friend   ; state 71
+Sense Ahead 136 136 Friend   ; state 72
+Turn Right 74   ; state 73
+Move 75 76   ; state 74
+Turn Left 77   ; state 75
+Sense Ahead 77 77 Friend   ; state 76
+Sense Ahead 136 136 Friend   ; state 77
+Sense Ahead 79 79 Friend   ; state 78
+Sense Ahead 80 80 Friend   ; state 79
+Turn Right 81   ; state 80
+Turn Right 82   ; state 81
+Turn Right 83   ; state 82
+Turn Right 84   ; state 83
+Turn Right 85   ; state 84
+Turn Right 86   ; state 85
+Sense Ahead 130 87 Food   ; state 86
+Turn Left 88   ; state 87
+Sense Here 89 119 Food   ; state 88
+PickUp 90 90   ; state 89
+Sense Ahead 91 91 Friend   ; state 90
+Sense Here 97 92 FoeHome   ; state 91
+Drop 93   ; state 92
+Turn Right 94   ; state 93
+Turn Right 95   ; state 94
+Turn Right 96   ; state 95
+Sense Ahead 136 136 Friend   ; state 96
+Sense Ahead 98 98 Friend   ; state 97
+Sense Ahead 99 107 FoeHome   ; state 98
+Move 103 100   ; state 99
+Flip 2 101 102   ; state 100
+Turn Left 104   ; state 101
+Turn Right 104   ; state 102
+Sense Ahead 104 104 Friend   ; state 103
+Flip 2 105 106   ; state 104
+Turn Left 98   ; state 105
+Turn Right 98   ; state 106
+Sense Ahead 115 108 FoeHome   ; state 107
+Move 109 114   ; state 108
+Drop 110   ; state 109
+Turn Right 111   ; state 110
+Turn Right 112   ; state 111
+Turn Right 113   ; state 112
+Sense Ahead 62 62 Friend   ; state 113
+Sense Ahead 41 41 Friend   ; state 114
+Sense Ahead 41 41 Friend   ; state 115
+Turn Right 117   ; state 116
+Turn Right 118   ; state 117
+Turn Right 124   ; state 118
+Sense LeftAhead 120 121 FoeHome   ; state 119
+Turn Left 124   ; state 120
+Sense RightAhead 122 123 FoeHome   ; state 121
+Turn Right 124   ; state 122
+Sense Ahead 124 124 Friend   ; state 123
+Flip 3 125 126   ; state 124
+Turn Left 127   ; state 125
+Turn Right 127   ; state 126
+Sense Ahead 128 129 FoeHome   ; state 127
+Move 86 86   ; state 128
+Sense Ahead 86 86 Friend   ; state 129
+Sense Ahead 135 131 FoeHome   ; state 130
+Move 132 134   ; state 131
+PickUp 133 133   ; state 132
+Sense Ahead 41 41 Friend   ; state 133
+Sense Ahead 146 146 Friend   ; state 134
+Turn Left 146   ; state 135
+Sense Ahead 137 137 Friend   ; state 136
+Sense Here 145 138 FoeHome   ; state 137
+Move 142 139   ; state 138
+Flip 2 140 141   ; state 139
+Turn Left 146   ; state 140
+Turn Right 146   ; state 141
+Flip 3 143 144   ; state 142
+Turn Left 146   ; state 143
+Move 146 146   ; state 144
+Sense Ahead 79 79 Friend   ; state 145
+Sense Ahead 62 62 Friend   ; state 146
+Sense Ahead 0 0 Friend   ; state 147

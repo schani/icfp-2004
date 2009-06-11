@@ -1,0 +1,100 @@
+;; -*- lisp -*-
+
+(defun make-adder (bit-field-name)
+  (labels ((make (lowest-bit num-bits)
+	     (if (zerop num-bits)
+		 '(nop)
+		 `(if (not (sense here (marker ,lowest-bit)))
+		   (mark ,lowest-bit)
+		   (progn
+		     (unmark ,lowest-bit)
+		     ,(make (+ 1 lowest-bit) (- num-bits 1)))))))
+    (destructuring-bind (first length values)
+	(lookup-bit-field bit-field-name)
+      (make first length))))
+
+(deflsgmacro add-one (bit-field-name)
+  (lisp-nostate (make-adder 'bit-field-name)))
+
+(defun split-list (lst)
+  (let ((len (length lst)))
+    (assert (evenp len))
+    (let* ((half (/ len 2))
+	   (indexes (integers-upto half)))
+      (values (mapcar #'(lambda (i) (nth i lst)) indexes)
+	      (mapcar #'(lambda (i) (nth (+ i half) lst)) indexes)))))
+
+(defun dispatch-cases (bit-index rest-cases direction case-alist)
+  (if (= (length rest-cases) 1)
+      (let ((case (assoc (car rest-cases) case-alist)))
+	(when (null case)
+	  (error "value ~A is not handled in case" (car rest-cases)))
+	(cons 'progn (cdr case)))
+      (multiple-value-bind (lower upper)
+	  (split-list rest-cases)
+	`(if (not (sense ,direction (marker ,bit-index)))
+	  ,(dispatch-cases (1- bit-index) lower direction case-alist)
+	  ,(dispatch-cases (1- bit-index) upper direction case-alist)))))
+
+(defun make-case (bit-field-name direction cases)
+  (destructuring-bind (first length values)
+      (lookup-bit-field bit-field-name)
+    (dispatch-cases (1- (+ first length)) values direction cases)))
+
+(deflsgmacro case (bit-field-name direction &rest cases)
+  (lisp-nostate (make-case 'bit-field-name 'direction 'cases)))
+
+(deflsgmacro when (condition &rest body)
+  (if condition
+      (lisp-nostate (cons 'progn 'body))
+      (nop)))
+
+(deflsgmacro unless (condition &rest body)
+  (if condition
+      (nop)
+      (lisp-nostate (cons 'progn 'body))))
+
+(defun make-flip-case (cases)
+  (assert (> (length cases) 0))
+  (cond ((= (length cases) 1)
+	 (car cases))
+	((evenp (length cases))
+	 (multiple-value-bind (lower upper)
+	     (split-list cases)
+	   `(if (flip 2)
+	     ,(make-flip-case lower)
+	     ,(make-flip-case upper))))
+	(t
+	 `(if (flip ,(length cases))
+	   ,(car cases)
+	   ,(make-flip-case (cdr cases))))))
+
+(deflsgmacro flip-case (&rest body)
+  (lisp-nostate (make-flip-case 'body)))
+
+(defun make-cond (cases)
+  (cond ((null cases)
+	 '(nop))
+	((eql (caar cases) 't)
+	 (assert (null (cdr cases)))
+	 (cons 'progn (cdar cases)))
+	(t
+	 `(if ,(caar cases)
+	   (progn ,@(cdar cases))
+	   ,(make-cond (cdr cases))))))
+
+(deflsgmacro cond (&rest body)
+  (lisp-nostate (make-cond 'body)))
+
+(defun make-do-times (num-times body)
+  (assert (>= num-times 0))
+  (cond ((zerop num-times)
+	 '(nop))
+	((= num-times 1)
+	 (cons 'progn body))
+	(t
+	 `(progn ,@body
+	   ,(make-do-times (1- num-times) body)))))
+
+(deflsgmacro do-times (num-times &rest body)
+  (lisp-nostate (make-do-times 'num-times 'body)))

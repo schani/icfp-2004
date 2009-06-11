@@ -1,0 +1,17 @@
+Ant Build Instructions
+======================
+
+Required: CLISP, OCaml
+
+cd compiler
+clisp
+  > (load "compiler.lisp")
+  > (compile-file "compiler.lisp")
+  > (load "winston-rachdi-1.lsg")
+  > (load "winston-rachdi-2.lsg")
+  > (quit)
+cd ../optimizer
+make
+cd ..
+./optimizer/optimizer compiler/winston-rachdi-1.ant >../solution-1.ant
+./optimizer/optimizer compiler/winston-rachdi-2.ant >../solution-2.ant

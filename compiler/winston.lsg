@@ -1,0 +1,123 @@
+;; -*- lisp -*-
+
+(deflsgmacro corner-looking-outward (corner-label)
+  (when (and (not (sense ahead home))
+	     (and (not (sense left-ahead home))
+		  (not (sense right-ahead home))))
+	     (goto corner-label)))
+	       
+(deflsgmacro corner-p (corner-label)
+  (progn 
+    (turn-to 1)
+    (corner-looking-outward corner-label)
+    (turn-to 2)
+    (corner-looking-outward corner-label)
+    (turn-to 3)
+    (corner-looking-outward corner-label)
+    (turn-to 4)
+    (corner-looking-outward corner-label)
+    (turn-to 5)
+    (corner-looking-outward corner-label)
+    (turn-to 6)
+    (corner-looking-outward corner-label)
+    ))
+
+(deflsgmacro left-right-corner (corner-label)
+  (progn
+    (turn-to 1)
+    (corner-looking-outward corner-label)
+    (turn-to 4)
+    (corner-looking-outward corner-label)
+    ))
+
+(deflsgmacro border-is-left ()
+  (and (not (sense left-ahead home))
+       (and (sense right-ahead home)
+	    (sense ahead home))))
+
+(deflsgmacro turn-to-border-is-left () 
+  (progn 
+    (while (sense ahead home)
+      (my-turn right)
+      )
+    (while (not (border-is-left))
+      (my-turn right))))
+
+
+(deflsgmacro goto-border (return-address)
+  (progn
+    (label start-goto-border)
+    (forever
+     (if (sense ahead home)
+	 (unless (move)
+	   (change-direction-randomly)
+	   (goto start-goto-border))
+       (goto return-address)
+       ))))
+
+(deflsgmacro do-evasion (return-address)
+  (progn
+    (my-turn right)
+    (forever
+     (if (sense ahead home)
+	 (if (move)
+             (progn
+	       (my-turn left)
+	       (pick-up)
+	       )
+	   (if (flip (lisp *winston-evasion-prob*))
+	       (progn 
+		 (change-direction-randomly)
+		 (goto-border return-address))
+	     (goto-border return-address)))
+       (goto return-address)))))
+
+(deflsgmacro do-360 ()
+  (do-times 6 (turn left)))
+
+(defparameter *winston-evasion-prob* 5)
+
+(deflsgmacro winston-bot ()
+  (progn
+    ;; unsafe turn !
+    (do-times 40 (do-360))
+	       
+    (left-right-corner lr-winston)
+
+    (label borderliner)
+    (turn-to-border-is-left)
+	       
+    (forever
+     (if (move)
+	 (progn
+	   (pick-up)
+	   (unless (sense ahead home)
+	     (left-right-corner lr-winston)
+	     (turn-to-border-is-left))
+	   )
+       (unless (sense here friend-with-food)
+	 (progn
+	   (do-evasion evasion-return)
+	   (label evasion-return)
+	   (turn-to-border-is-left)
+	   ))))
+	       
+    (label lr-winston)
+    (when (sense here friend-with-food)
+      (drop))
+    (turn-to 1)
+    (unless (sense ahead home)
+      (turn-to 4))
+    (while (not (sense right-ahead friend-with-food)) 
+      (nop)
+		 ;;;; TODO TESTCODE
+					;(when (Flip 1000)
+					;  (my-Turn Left)
+					;  (move)
+					;  (goto Borderliner))
+      )
+    (my-turn left)
+    (move)
+    (pick-up)
+    (goto borderliner)
+    ))

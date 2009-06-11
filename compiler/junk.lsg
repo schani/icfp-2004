@@ -1,0 +1,329 @@
+(defparameter *state-ant*
+  '(with-state (dir (1 2 3 4 5 6))
+    (forever
+     (my-turn left)
+     (my-turn left)
+     (move)
+     (move)
+     (turn-to 2)
+     (move)
+     (move)
+     (turn-to 1))))
+
+;(compile-to-file *state-ant* nil "state.ant")
+
+(deflsgmacro walk-brutally ()
+  (while (not (move))
+    (nop)))
+
+(defparameter *mark-fields*
+  (append *home-fields*
+	  '((food-trace (bit 3) (no yes)))))
+
+(defparameter *mark-ant*
+  '(with-state (dir (1 2 3 4 5 6))
+    (label start)			;we are at home
+    (progn
+      (drop)				;we might be carrying food
+      (change-direction-randomly)
+      (goto start-walking))
+
+    (label start-walking)
+    (forever
+     (when (flip 3)		       ;change our direction sometimes
+       (if (flip 2)
+	   (my-turn left)
+	   (my-turn right)))
+
+     (unless (sense ahead (marker home 0))
+       (goto walk-back-and-erase))
+
+     (when (move)		;move and then mark the direction back
+					;simply wait if we are blocked
+       (mark-home-direction (lisp (reverse-direction dir)))
+       (when (sense here food)
+	 (pick-up)
+	 (if (sense here food)
+	     (goto walk-back-and-mark-food)
+	     (goto walk-back-and-erase)))
+       (when (flip 20)		;if we have moved about 10 times, turn around and go back
+	 (goto walk-back-and-erase))))
+
+    (label start-with-food-trace)
+    (progn
+      (drop)
+      (turn-around)
+      (goto follow-food-trace))
+
+    (label follow-food-trace)
+    (forever
+     (cond ((and (sense here food)
+		 (not (sense here home)))
+	    (pick-up)
+	    (if (sense here food)
+		(goto walk-back-and-mark-food)
+		(goto walk-back-and-erase)))
+	   ((sense ahead (marker food-trace yes))
+	    (walk-brutally))
+	   ((sense left-ahead (marker food-trace yes))
+	    (my-turn left)
+	    (walk-brutally))
+	   ((sense left-ahead (marker food-trace yes))
+	    (my-turn right)
+	    (walk-brutally))
+	   (t
+	    (my-turn left)
+	    (if (sense left-ahead (marker food-trace yes))
+		(progn
+		  (my-turn left)
+		  (walk-brutally))
+		(progn
+		  (my-turn right)
+		  (my-turn right)
+		  (if (sense right-ahead (marker food-trace yes))
+		      (progn
+			(my-turn right)
+			(walk-brutally))
+		      (forever		;FIXME: need fallback
+		       (turn left))))))))
+
+    (label walk-back-and-erase)
+    (forever
+     (turn-home start)			;turn home or goto start if no marker found
+     (mark home 0)
+     (mark food-trace no)
+     (walk-brutally))
+
+    (label walk-back-and-mark-food)
+    (forever
+     (turn-home start-with-food-trace)
+     (mark food-trace yes)
+     (walk-brutally))
+
+    (label finish)
+    (goto start)))
+
+;(compile-to-file *mark-ant* *mark-fields* "mark.ant")
+
+(deflsgmacro rotate ()
+  (forever
+   (turn left)))
+
+(deflsgmacro rotate-right ()
+  (forever
+   (turn right)))
+
+(defparameter *sidewalk-ant*
+  '(with-state (dir (1 2 3 4 5 6))
+    (do-times 4
+      (flip 1))
+    (label start-walking)
+    (forever
+     (when (flip 3)		       ;change our direction sometimes
+       (if (flip 2)
+	   (my-turn left)
+	   (my-turn right)))
+
+     (unless (sense ahead (marker home 0))
+       (goto turn-around-and-sidewalk))
+
+     (when (move)
+       (mark-home-direction (lisp (reverse-direction dir)))
+       (when (flip 20)
+	 (goto turn-around-and-sidewalk))))
+
+    (label turn-around-and-sidewalk)
+    (progn
+      (my-turn left)
+      (walk-brutally)
+      (my-turn left)
+      (my-turn left)
+      (forever
+       (flip (lisp (+ 10000 dir)))
+       (relative-home-case left-ahead
+			   (-2
+			    (do-times 2
+			      (walk-brutally)
+			      (my-turn left)))
+			   (-1
+			    (walk-brutally)
+			    (my-turn left))
+			   (0
+			    (nop))
+			   (1
+			    (my-turn right)
+			    (goto no-walk-needed))
+			   (2
+			    (my-turn left)
+			    (my-turn left)
+			    (walk-brutally)
+			    (my-turn left)
+			    (my-turn left)
+			    (goto no-walk-needed))
+			   (3
+			    (do-times 3
+			      (walk-brutally)
+			      (my-turn left)))
+			   (t
+			    (rotate))
+			   (nil
+			    (rotate)))
+       (walk-brutally)
+       (do-times 6
+	 (turn right))
+       (label no-walk-needed)
+       (nop)
+       ))))
+
+;(compile-to-file *sidewalk-ant* *mark-fields* "sidewalk.ant")
+
+
+
+
+(defparameter *mega-rachdi*
+  ;; flip and set my direction to something
+
+  '(with-state (dir (1 2 3 4 5 6))
+    (label start)
+    (progn
+      ;; walk out of home in random direction.  we may assume that we
+      ;; do not hit a rock if we go out of our home.
+      ;;
+      ;; we we're out of home, switch to search.
+
+      ;; FIXME: there might be ants coming in, so maybe we should
+      ;; evade them
+      (leave-home-randomly)
+      (goto search)
+      )
+
+
+    (label search)
+    (progn
+      ;; now that we are away from home, we walk along our direction
+      ;; with a few random turns thrown in and mark the direction we
+      ;; came from, but only if our path is not crossed by another.
+      ;; in that case, we walk along anyway, but do not overwrite the
+      ;; path.
+      ;;
+      ;; as soon as we hit a path with the food flag set, we switch to
+      ;; go-food mode.
+      ;;
+      ;; if we hit food, we take it and search if there is more food
+      ;; nearby.  if there is, switch to go-home-and-mark, otherwise
+      ;; switch to go-home-and-erase.
+
+      (forever
+       (cond ((sense here food)
+	      (pick-up)
+	      (search-for-more-food-and-dispatch))
+	     ((sense here (marker food yes))
+	      (turn-to-food-trace)
+	      (goto go-food))
+	     (t
+	      (mark-home-if-allowed)
+	      (forever
+	       (when (flip 5)
+		 (turn-once-randomly))
+	       (if (move)
+		   (goto finished-search-move)
+		   (when (sense ahead rock)
+		     (turn-once-randomly))))
+	      (label finished-search-move)))))
+
+    (label go-food)
+    (progn
+      ;; we have found a path with a food flag.  walk along the path
+      ;; as long as the food flag is set.  the path is marked in the
+      ;; opposite direction, so use a smart search mode.
+      ;;
+      ;; look ahead and left and right to check for food along the
+      ;; way.  if we find some, we walk there, take it, check if
+      ;; there's more food here, and depending on the result switch to
+      ;; go-home-and-mark or go-home.
+      ;;
+      ;; if either the food flag or the path ends and there's no food,
+      ;; switch to erase-food-flag.
+      ;;
+      ;; if there is a friend with food ahead of us, we assume he's on
+      ;; the way back, so we switch to evade-friend.  if he has no
+      ;; food, he might be erasing the food path, so continue checking
+      ;; it.  if it disappears, we don't know where to go, so
+      ;; randomize our direction and switch to search.
+      (forever
+       (if (sense here food)
+	   (progn
+	     (pick-up)
+	      ;; we can assume here that the home direction on our
+	      ;; field is the opposite of the direction we are facing.
+	     (goto go-home))
+	   (progn
+	     (check-for-continuation-of-food-path no-food-path-continuation)
+	     (if (move)
+		 
+
+
+	     (label no-food-path-continuation)
+      
+      )))))
+
+    (label go-home)
+    (progn
+      ;; go home without detours and sensings.
+      )
+
+    (label go-home-and-erase)
+    (progn
+      ;; we have food and there's no other food in the vicinity.  we
+      ;; are facing in the direction we came from, i.e., either our
+      ;; own trace or the food trace we followed.
+      ;;
+      ;; simply walk back along the path until we are home.  if
+      ;; there's someone ahead of us, just wait until he's gone.
+      ;;
+      ;; when we're home, drop the food, randomize our direction and
+      ;; switch to start
+      )
+
+
+    (label go-home-and-mark)
+    (progn
+      ;; we have food and there's food in the vicinity.  we are facing
+      ;; in the direction we came from.
+      ;;
+      ;; simply walk back along the path and mark the food flag until
+      ;; we are home.  if there's someone ahead of us, just wait until
+      ;; he's gone.
+      ;;
+      ;; when we're home, drop the food, turn around and switch to
+      ;; go-food.
+      )
+
+
+    (label erase-food-flag)
+    (progn
+      ;; we are on a path with the food flag set but there's no food
+      ;; here.  walk along the path and clear the food flag until we
+      ;; are home.  then randomize our direction and switch to start.
+      )
+
+
+    (label evade-friend)
+    (progn
+      ;; we are on a path with the food flag set, but there's a friend
+      ;; with food ahead of us.
+      ;;
+      ;; check for free space around us (but not so that we would walk
+      ;; back on the path), walk there and wait for some time.  then
+      ;; try to go back to the path and search to go-food.
+      ;;
+      ;; if there's no free space around us, there's nothing we can do
+      ;; anyway, so we just wait until there's either free space or
+      ;; the path ahead is free.  if the path is free, switch back to
+      ;; go-food.  if there's free space, evade, wait, walk back and
+      ;; switch to go-food.
+      )))
+
+;(compile-to-file *rachdi* nil "rachdi.ant")
+
+(compile-to-file '(nop) nil "rotator.ant")

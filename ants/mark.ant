@@ -1,0 +1,547 @@
+Drop 1   ; state 0
+Flip 2 2 14   ; state 1
+Flip 3 3 6   ; state 2
+Sense Ahead 4 4 Friend   ; state 3
+Sense Ahead 5 5 Friend   ; state 4
+Sense Ahead 28 28 Friend   ; state 5
+Flip 2 7 10   ; state 6
+Turn Right 8   ; state 7
+Sense Ahead 100 100 Friend   ; state 8
+Sense Ahead 28 28 Friend   ; state 9
+Turn Right 11   ; state 10
+Turn Right 12   ; state 11
+Sense Ahead 195 195 Friend   ; state 12
+Sense Ahead 28 28 Friend   ; state 13
+Flip 3 15 20   ; state 14
+Turn Right 16   ; state 15
+Turn Right 17   ; state 16
+Turn Right 18   ; state 17
+Sense Ahead 292 292 Friend   ; state 18
+Sense Ahead 28 28 Friend   ; state 19
+Flip 2 21 25   ; state 20
+Turn Left 22   ; state 21
+Turn Left 23   ; state 22
+Sense Ahead 388 388 Friend   ; state 23
+Sense Ahead 28 28 Friend   ; state 24
+Turn Left 26   ; state 25
+Sense Ahead 482 482 Friend   ; state 26
+Sense Ahead 28 28 Friend   ; state 27
+Flip 3 29 36   ; state 28
+Flip 2 30 33   ; state 29
+Turn Left 31   ; state 30
+Sense Ahead 487 487 Friend   ; state 31
+Sense Ahead 37 37 Friend   ; state 32
+Turn Right 34   ; state 33
+Sense Ahead 126 126 Friend   ; state 34
+Sense Ahead 37 37 Friend   ; state 35
+Sense Ahead 37 37 Friend   ; state 36
+Sense Ahead 41 38 Marker 0   ; state 37
+Sense Ahead 41 39 Marker 1   ; state 38
+Sense Ahead 41 40 Marker 2   ; state 39
+Sense Ahead 42 42 Friend   ; state 40
+Sense Ahead 54 54 Friend   ; state 41
+Move 43 53   ; state 42
+Unmark 0 44   ; state 43
+Unmark 1 45   ; state 44
+Mark 2 46   ; state 45
+Sense Here 47 49 Food   ; state 46
+PickUp 48 48   ; state 47
+Sense Ahead 54 54 Friend   ; state 48
+Sense Ahead 50 50 Friend   ; state 49
+Flip 20 51 52   ; state 50
+Sense Ahead 54 54 Friend   ; state 51
+Sense Ahead 28 28 Friend   ; state 52
+Sense Ahead 28 28 Friend   ; state 53
+Sense Here 69 55 Marker 2   ; state 54
+Sense Here 61 56 Marker 1   ; state 55
+Sense Here 58 57 Marker 0   ; state 56
+Sense Ahead 90 90 Friend   ; state 57
+Sense Ahead 59 59 Friend   ; state 58
+Sense Ahead 60 60 Friend   ; state 59
+Sense Ahead 85 85 Friend   ; state 60
+Sense Here 65 62 Marker 0   ; state 61
+Turn Right 63   ; state 62
+Sense Ahead 155 155 Friend   ; state 63
+Sense Ahead 85 85 Friend   ; state 64
+Turn Right 66   ; state 65
+Turn Right 67   ; state 66
+Sense Ahead 250 250 Friend   ; state 67
+Sense Ahead 85 85 Friend   ; state 68
+Sense Here 80 70 Marker 1   ; state 69
+Sense Here 76 71 Marker 0   ; state 70
+Turn Right 72   ; state 71
+Turn Right 73   ; state 72
+Turn Right 74   ; state 73
+Sense Ahead 348 348 Friend   ; state 74
+Sense Ahead 85 85 Friend   ; state 75
+Turn Left 77   ; state 76
+Turn Left 78   ; state 77
+Sense Ahead 443 443 Friend   ; state 78
+Sense Ahead 85 85 Friend   ; state 79
+Sense Here 84 81 Marker 0   ; state 80
+Turn Left 82   ; state 81
+Sense Ahead 538 538 Friend   ; state 82
+Sense Ahead 85 85 Friend   ; state 83
+Sense Ahead 90 90 Friend   ; state 84
+Unmark 0 86   ; state 85
+Unmark 1 87   ; state 86
+Unmark 2 88   ; state 87
+Move 54 89   ; state 88
+Sense Ahead 88 88 Friend   ; state 89
+Sense Ahead 0 0 Friend   ; state 90
+Drop 92   ; state 91
+Flip 2 93 104   ; state 92
+Flip 3 94 97   ; state 93
+Turn Left 95   ; state 94
+Sense Ahead 5 5 Friend   ; state 95
+Sense Ahead 119 119 Friend   ; state 96
+Flip 2 98 101   ; state 97
+Sense Ahead 99 99 Friend   ; state 98
+Sense Ahead 100 100 Friend   ; state 99
+Sense Ahead 119 119 Friend   ; state 100
+Turn Right 102   ; state 101
+Sense Ahead 195 195 Friend   ; state 102
+Sense Ahead 119 119 Friend   ; state 103
+Flip 3 105 109   ; state 104
+Turn Right 106   ; state 105
+Turn Right 107   ; state 106
+Sense Ahead 292 292 Friend   ; state 107
+Sense Ahead 119 119 Friend   ; state 108
+Flip 2 110 115   ; state 109
+Turn Right 111   ; state 110
+Turn Right 112   ; state 111
+Turn Right 113   ; state 112
+Sense Ahead 388 388 Friend   ; state 113
+Sense Ahead 119 119 Friend   ; state 114
+Turn Left 116   ; state 115
+Turn Left 117   ; state 116
+Sense Ahead 482 482 Friend   ; state 117
+Sense Ahead 119 119 Friend   ; state 118
+Flip 3 120 127   ; state 119
+Flip 2 121 124   ; state 120
+Turn Left 122   ; state 121
+Sense Ahead 32 32 Friend   ; state 122
+Sense Ahead 128 128 Friend   ; state 123
+Turn Right 125   ; state 124
+Sense Ahead 217 217 Friend   ; state 125
+Sense Ahead 128 128 Friend   ; state 126
+Sense Ahead 128 128 Friend   ; state 127
+Sense Ahead 132 129 Marker 0   ; state 128
+Sense Ahead 132 130 Marker 1   ; state 129
+Sense Ahead 132 131 Marker 2   ; state 130
+Sense Ahead 133 133 Friend   ; state 131
+Sense Ahead 145 145 Friend   ; state 132
+Move 134 144   ; state 133
+Mark 0 135   ; state 134
+Unmark 1 136   ; state 135
+Mark 2 137   ; state 136
+Sense Here 138 140 Food   ; state 137
+PickUp 139 139   ; state 138
+Sense Ahead 145 145 Friend   ; state 139
+Sense Ahead 141 141 Friend   ; state 140
+Flip 20 142 143   ; state 141
+Sense Ahead 145 145 Friend   ; state 142
+Sense Ahead 119 119 Friend   ; state 143
+Sense Ahead 119 119 Friend   ; state 144
+Sense Here 159 146 Marker 2   ; state 145
+Sense Here 152 147 Marker 1   ; state 146
+Sense Here 149 148 Marker 0   ; state 147
+Sense Ahead 181 181 Friend   ; state 148
+Turn Left 150   ; state 149
+Sense Ahead 60 60 Friend   ; state 150
+Sense Ahead 176 176 Friend   ; state 151
+Sense Here 156 153 Marker 0   ; state 152
+Sense Ahead 154 154 Friend   ; state 153
+Sense Ahead 155 155 Friend   ; state 154
+Sense Ahead 176 176 Friend   ; state 155
+Turn Right 157   ; state 156
+Sense Ahead 250 250 Friend   ; state 157
+Sense Ahead 176 176 Friend   ; state 158
+Sense Here 170 160 Marker 1   ; state 159
+Sense Here 165 161 Marker 0   ; state 160
+Turn Right 162   ; state 161
+Turn Right 163   ; state 162
+Sense Ahead 348 348 Friend   ; state 163
+Sense Ahead 176 176 Friend   ; state 164
+Turn Right 166   ; state 165
+Turn Right 167   ; state 166
+Turn Right 168   ; state 167
+Sense Ahead 443 443 Friend   ; state 168
+Sense Ahead 176 176 Friend   ; state 169
+Sense Here 175 171 Marker 0   ; state 170
+Turn Left 172   ; state 171
+Turn Left 173   ; state 172
+Sense Ahead 538 538 Friend   ; state 173
+Sense Ahead 176 176 Friend   ; state 174
+Sense Ahead 181 181 Friend   ; state 175
+Unmark 0 177   ; state 176
+Unmark 1 178   ; state 177
+Unmark 2 179   ; state 178
+Move 145 180   ; state 179
+Sense Ahead 179 179 Friend   ; state 180
+Sense Ahead 91 91 Friend   ; state 181
+Drop 183   ; state 182
+Flip 2 184 196   ; state 183
+Flip 3 185 189   ; state 184
+Turn Left 186   ; state 185
+Turn Left 187   ; state 186
+Sense Ahead 5 5 Friend   ; state 187
+Sense Ahead 210 210 Friend   ; state 188
+Flip 2 190 193   ; state 189
+Turn Left 191   ; state 190
+Sense Ahead 100 100 Friend   ; state 191
+Sense Ahead 210 210 Friend   ; state 192
+Sense Ahead 194 194 Friend   ; state 193
+Sense Ahead 195 195 Friend   ; state 194
+Sense Ahead 210 210 Friend   ; state 195
+Flip 3 197 200   ; state 196
+Turn Right 198   ; state 197
+Sense Ahead 292 292 Friend   ; state 198
+Sense Ahead 210 210 Friend   ; state 199
+Flip 2 201 205   ; state 200
+Turn Right 202   ; state 201
+Turn Right 203   ; state 202
+Sense Ahead 388 388 Friend   ; state 203
+Sense Ahead 210 210 Friend   ; state 204
+Turn Right 206   ; state 205
+Turn Right 207   ; state 206
+Turn Right 208   ; state 207
+Sense Ahead 482 482 Friend   ; state 208
+Sense Ahead 210 210 Friend   ; state 209
+Flip 3 211 218   ; state 210
+Flip 2 212 215   ; state 211
+Turn Left 213   ; state 212
+Sense Ahead 123 123 Friend   ; state 213
+Sense Ahead 219 219 Friend   ; state 214
+Turn Right 216   ; state 215
+Sense Ahead 308 308 Friend   ; state 216
+Sense Ahead 219 219 Friend   ; state 217
+Sense Ahead 219 219 Friend   ; state 218
+Sense Ahead 223 220 Marker 0   ; state 219
+Sense Ahead 223 221 Marker 1   ; state 220
+Sense Ahead 223 222 Marker 2   ; state 221
+Sense Ahead 224 224 Friend   ; state 222
+Sense Ahead 236 236 Friend   ; state 223
+Move 225 235   ; state 224
+Unmark 0 226   ; state 225
+Mark 1 227   ; state 226
+Mark 2 228   ; state 227
+Sense Here 229 231 Food   ; state 228
+PickUp 230 230   ; state 229
+Sense Ahead 236 236 Friend   ; state 230
+Sense Ahead 232 232 Friend   ; state 231
+Flip 20 233 234   ; state 232
+Sense Ahead 236 236 Friend   ; state 233
+Sense Ahead 210 210 Friend   ; state 234
+Sense Ahead 210 210 Friend   ; state 235
+Sense Here 251 237 Marker 2   ; state 236
+Sense Here 244 238 Marker 1   ; state 237
+Sense Here 240 239 Marker 0   ; state 238
+Sense Ahead 272 272 Friend   ; state 239
+Turn Left 241   ; state 240
+Turn Left 242   ; state 241
+Sense Ahead 60 60 Friend   ; state 242
+Sense Ahead 267 267 Friend   ; state 243
+Sense Here 248 245 Marker 0   ; state 244
+Turn Left 246   ; state 245
+Sense Ahead 155 155 Friend   ; state 246
+Sense Ahead 267 267 Friend   ; state 247
+Sense Ahead 249 249 Friend   ; state 248
+Sense Ahead 250 250 Friend   ; state 249
+Sense Ahead 267 267 Friend   ; state 250
+Sense Here 260 252 Marker 1   ; state 251
+Sense Here 256 253 Marker 0   ; state 252
+Turn Right 254   ; state 253
+Sense Ahead 348 348 Friend   ; state 254
+Sense Ahead 267 267 Friend   ; state 255
+Turn Right 257   ; state 256
+Turn Right 258   ; state 257
+Sense Ahead 443 443 Friend   ; state 258
+Sense Ahead 267 267 Friend   ; state 259
+Sense Here 266 261 Marker 0   ; state 260
+Turn Right 262   ; state 261
+Turn Right 263   ; state 262
+Turn Right 264   ; state 263
+Sense Ahead 538 538 Friend   ; state 264
+Sense Ahead 267 267 Friend   ; state 265
+Sense Ahead 272 272 Friend   ; state 266
+Unmark 0 268   ; state 267
+Unmark 1 269   ; state 268
+Unmark 2 270   ; state 269
+Move 236 271   ; state 270
+Sense Ahead 270 270 Friend   ; state 271
+Sense Ahead 182 182 Friend   ; state 272
+Drop 274   ; state 273
+Flip 2 275 289   ; state 274
+Flip 3 276 281   ; state 275
+Turn Right 277   ; state 276
+Turn Right 278   ; state 277
+Turn Right 279   ; state 278
+Sense Ahead 5 5 Friend   ; state 279
+Sense Ahead 301 301 Friend   ; state 280
+Flip 2 282 286   ; state 281
+Turn Left 283   ; state 282
+Turn Left 284   ; state 283
+Sense Ahead 100 100 Friend   ; state 284
+Sense Ahead 301 301 Friend   ; state 285
+Turn Left 287   ; state 286
+Sense Ahead 195 195 Friend   ; state 287
+Sense Ahead 301 301 Friend   ; state 288
+Flip 3 290 293   ; state 289
+Sense Ahead 291 291 Friend   ; state 290
+Sense Ahead 292 292 Friend   ; state 291
+Sense Ahead 301 301 Friend   ; state 292
+Flip 2 294 297   ; state 293
+Turn Right 295   ; state 294
+Sense Ahead 388 388 Friend   ; state 295
+Sense Ahead 301 301 Friend   ; state 296
+Turn Right 298   ; state 297
+Turn Right 299   ; state 298
+Sense Ahead 482 482 Friend   ; state 299
+Sense Ahead 301 301 Friend   ; state 300
+Flip 3 302 309   ; state 301
+Flip 2 303 306   ; state 302
+Turn Left 304   ; state 303
+Sense Ahead 214 214 Friend   ; state 304
+Sense Ahead 310 310 Friend   ; state 305
+Turn Right 307   ; state 306
+Sense Ahead 399 399 Friend   ; state 307
+Sense Ahead 310 310 Friend   ; state 308
+Sense Ahead 310 310 Friend   ; state 309
+Sense Ahead 314 311 Marker 0   ; state 310
+Sense Ahead 314 312 Marker 1   ; state 311
+Sense Ahead 314 313 Marker 2   ; state 312
+Sense Ahead 315 315 Friend   ; state 313
+Sense Ahead 327 327 Friend   ; state 314
+Move 316 326   ; state 315
+Mark 0 317   ; state 316
+Unmark 1 318   ; state 317
+Unmark 2 319   ; state 318
+Sense Here 320 322 Food   ; state 319
+PickUp 321 321   ; state 320
+Sense Ahead 327 327 Friend   ; state 321
+Sense Ahead 323 323 Friend   ; state 322
+Flip 20 324 325   ; state 323
+Sense Ahead 327 327 Friend   ; state 324
+Sense Ahead 301 301 Friend   ; state 325
+Sense Ahead 301 301 Friend   ; state 326
+Sense Here 344 328 Marker 2   ; state 327
+Sense Here 336 329 Marker 1   ; state 328
+Sense Here 331 330 Marker 0   ; state 329
+Sense Ahead 363 363 Friend   ; state 330
+Turn Right 332   ; state 331
+Turn Right 333   ; state 332
+Turn Right 334   ; state 333
+Sense Ahead 60 60 Friend   ; state 334
+Sense Ahead 358 358 Friend   ; state 335
+Sense Here 341 337 Marker 0   ; state 336
+Turn Left 338   ; state 337
+Turn Left 339   ; state 338
+Sense Ahead 155 155 Friend   ; state 339
+Sense Ahead 358 358 Friend   ; state 340
+Turn Left 342   ; state 341
+Sense Ahead 250 250 Friend   ; state 342
+Sense Ahead 358 358 Friend   ; state 343
+Sense Here 352 345 Marker 1   ; state 344
+Sense Here 349 346 Marker 0   ; state 345
+Sense Ahead 347 347 Friend   ; state 346
+Sense Ahead 348 348 Friend   ; state 347
+Sense Ahead 358 358 Friend   ; state 348
+Turn Right 350   ; state 349
+Sense Ahead 443 443 Friend   ; state 350
+Sense Ahead 358 358 Friend   ; state 351
+Sense Here 357 353 Marker 0   ; state 352
+Turn Right 354   ; state 353
+Turn Right 355   ; state 354
+Sense Ahead 538 538 Friend   ; state 355
+Sense Ahead 358 358 Friend   ; state 356
+Sense Ahead 363 363 Friend   ; state 357
+Unmark 0 359   ; state 358
+Unmark 1 360   ; state 359
+Unmark 2 361   ; state 360
+Move 327 362   ; state 361
+Sense Ahead 361 361 Friend   ; state 362
+Sense Ahead 273 273 Friend   ; state 363
+Drop 365   ; state 364
+Flip 2 366 381   ; state 365
+Flip 3 367 371   ; state 366
+Turn Right 368   ; state 367
+Turn Right 369   ; state 368
+Sense Ahead 5 5 Friend   ; state 369
+Sense Ahead 392 392 Friend   ; state 370
+Flip 2 372 377   ; state 371
+Turn Right 373   ; state 372
+Turn Right 374   ; state 373
+Turn Right 375   ; state 374
+Sense Ahead 100 100 Friend   ; state 375
+Sense Ahead 392 392 Friend   ; state 376
+Turn Left 378   ; state 377
+Turn Left 379   ; state 378
+Sense Ahead 195 195 Friend   ; state 379
+Sense Ahead 392 392 Friend   ; state 380
+Flip 3 382 385   ; state 381
+Turn Left 383   ; state 382
+Sense Ahead 292 292 Friend   ; state 383
+Sense Ahead 392 392 Friend   ; state 384
+Flip 2 386 389   ; state 385
+Sense Ahead 387 387 Friend   ; state 386
+Sense Ahead 388 388 Friend   ; state 387
+Sense Ahead 392 392 Friend   ; state 388
+Turn Right 390   ; state 389
+Sense Ahead 482 482 Friend   ; state 390
+Sense Ahead 392 392 Friend   ; state 391
+Flip 3 393 400   ; state 392
+Flip 2 394 397   ; state 393
+Turn Left 395   ; state 394
+Sense Ahead 305 305 Friend   ; state 395
+Sense Ahead 401 401 Friend   ; state 396
+Turn Right 398   ; state 397
+Sense Ahead 490 490 Friend   ; state 398
+Sense Ahead 401 401 Friend   ; state 399
+Sense Ahead 401 401 Friend   ; state 400
+Sense Ahead 405 402 Marker 0   ; state 401
+Sense Ahead 405 403 Marker 1   ; state 402
+Sense Ahead 405 404 Marker 2   ; state 403
+Sense Ahead 406 406 Friend   ; state 404
+Sense Ahead 418 418 Friend   ; state 405
+Move 407 417   ; state 406
+Unmark 0 408   ; state 407
+Mark 1 409   ; state 408
+Unmark 2 410   ; state 409
+Sense Here 411 413 Food   ; state 410
+PickUp 412 412   ; state 411
+Sense Ahead 418 418 Friend   ; state 412
+Sense Ahead 414 414 Friend   ; state 413
+Flip 20 415 416   ; state 414
+Sense Ahead 418 418 Friend   ; state 415
+Sense Ahead 392 392 Friend   ; state 416
+Sense Ahead 392 392 Friend   ; state 417
+Sense Here 436 419 Marker 2   ; state 418
+Sense Here 426 420 Marker 1   ; state 419
+Sense Here 422 421 Marker 0   ; state 420
+Sense Ahead 454 454 Friend   ; state 421
+Turn Right 423   ; state 422
+Turn Right 424   ; state 423
+Sense Ahead 60 60 Friend   ; state 424
+Sense Ahead 449 449 Friend   ; state 425
+Sense Here 432 427 Marker 0   ; state 426
+Turn Right 428   ; state 427
+Turn Right 429   ; state 428
+Turn Right 430   ; state 429
+Sense Ahead 155 155 Friend   ; state 430
+Sense Ahead 449 449 Friend   ; state 431
+Turn Left 433   ; state 432
+Turn Left 434   ; state 433
+Sense Ahead 250 250 Friend   ; state 434
+Sense Ahead 449 449 Friend   ; state 435
+Sense Here 444 437 Marker 1   ; state 436
+Sense Here 441 438 Marker 0   ; state 437
+Turn Left 439   ; state 438
+Sense Ahead 348 348 Friend   ; state 439
+Sense Ahead 449 449 Friend   ; state 440
+Sense Ahead 442 442 Friend   ; state 441
+Sense Ahead 443 443 Friend   ; state 442
+Sense Ahead 449 449 Friend   ; state 443
+Sense Here 448 445 Marker 0   ; state 444
+Turn Right 446   ; state 445
+Sense Ahead 538 538 Friend   ; state 446
+Sense Ahead 449 449 Friend   ; state 447
+Sense Ahead 454 454 Friend   ; state 448
+Unmark 0 450   ; state 449
+Unmark 1 451   ; state 450
+Unmark 2 452   ; state 451
+Move 418 453   ; state 452
+Sense Ahead 452 452 Friend   ; state 453
+Sense Ahead 364 364 Friend   ; state 454
+Drop 456   ; state 455
+Flip 2 457 471   ; state 456
+Flip 3 458 461   ; state 457
+Turn Right 459   ; state 458
+Sense Ahead 5 5 Friend   ; state 459
+Sense Ahead 483 483 Friend   ; state 460
+Flip 2 462 466   ; state 461
+Turn Right 463   ; state 462
+Turn Right 464   ; state 463
+Sense Ahead 100 100 Friend   ; state 464
+Sense Ahead 483 483 Friend   ; state 465
+Turn Right 467   ; state 466
+Turn Right 468   ; state 467
+Turn Right 469   ; state 468
+Sense Ahead 195 195 Friend   ; state 469
+Sense Ahead 483 483 Friend   ; state 470
+Flip 3 472 476   ; state 471
+Turn Left 473   ; state 472
+Turn Left 474   ; state 473
+Sense Ahead 292 292 Friend   ; state 474
+Sense Ahead 483 483 Friend   ; state 475
+Flip 2 477 480   ; state 476
+Turn Left 478   ; state 477
+Sense Ahead 388 388 Friend   ; state 478
+Sense Ahead 483 483 Friend   ; state 479
+Sense Ahead 481 481 Friend   ; state 480
+Sense Ahead 482 482 Friend   ; state 481
+Sense Ahead 483 483 Friend   ; state 482
+Flip 3 484 491   ; state 483
+Flip 2 485 488   ; state 484
+Turn Left 486   ; state 485
+Sense Ahead 396 396 Friend   ; state 486
+Sense Ahead 492 492 Friend   ; state 487
+Turn Right 489   ; state 488
+Sense Ahead 35 35 Friend   ; state 489
+Sense Ahead 492 492 Friend   ; state 490
+Sense Ahead 492 492 Friend   ; state 491
+Sense Ahead 496 493 Marker 0   ; state 492
+Sense Ahead 496 494 Marker 1   ; state 493
+Sense Ahead 496 495 Marker 2   ; state 494
+Sense Ahead 497 497 Friend   ; state 495
+Sense Ahead 509 509 Friend   ; state 496
+Move 498 508   ; state 497
+Mark 0 499   ; state 498
+Mark 1 500   ; state 499
+Unmark 2 501   ; state 500
+Sense Here 502 504 Food   ; state 501
+PickUp 503 503   ; state 502
+Sense Ahead 509 509 Friend   ; state 503
+Sense Ahead 505 505 Friend   ; state 504
+Flip 20 506 507   ; state 505
+Sense Ahead 509 509 Friend   ; state 506
+Sense Ahead 483 483 Friend   ; state 507
+Sense Ahead 483 483 Friend   ; state 508
+Sense Here 526 510 Marker 2   ; state 509
+Sense Here 516 511 Marker 1   ; state 510
+Sense Here 513 512 Marker 0   ; state 511
+Sense Ahead 545 545 Friend   ; state 512
+Turn Right 514   ; state 513
+Sense Ahead 60 60 Friend   ; state 514
+Sense Ahead 540 540 Friend   ; state 515
+Sense Here 521 517 Marker 0   ; state 516
+Turn Right 518   ; state 517
+Turn Right 519   ; state 518
+Sense Ahead 155 155 Friend   ; state 519
+Sense Ahead 540 540 Friend   ; state 520
+Turn Right 522   ; state 521
+Turn Right 523   ; state 522
+Turn Right 524   ; state 523
+Sense Ahead 250 250 Friend   ; state 524
+Sense Ahead 540 540 Friend   ; state 525
+Sense Here 535 527 Marker 1   ; state 526
+Sense Here 532 528 Marker 0   ; state 527
+Turn Left 529   ; state 528
+Turn Left 530   ; state 529
+Sense Ahead 348 348 Friend   ; state 530
+Sense Ahead 540 540 Friend   ; state 531
+Turn Left 533   ; state 532
+Sense Ahead 443 443 Friend   ; state 533
+Sense Ahead 540 540 Friend   ; state 534
+Sense Here 539 536 Marker 0   ; state 535
+Sense Ahead 537 537 Friend   ; state 536
+Sense Ahead 538 538 Friend   ; state 537
+Sense Ahead 540 540 Friend   ; state 538
+Sense Ahead 545 545 Friend   ; state 539
+Unmark 0 541   ; state 540
+Unmark 1 542   ; state 541
+Unmark 2 543   ; state 542
+Move 509 544   ; state 543
+Sense Ahead 543 543 Friend   ; state 544
+Sense Ahead 455 455 Friend   ; state 545
+Sense Ahead 0 0 Friend   ; state 546

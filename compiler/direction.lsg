@@ -1,0 +1,131 @@
+;;; -*- lisp -*-
+
+(defparameter *home-fields*
+  '((home (field 0 2) int)))
+
+(defun make-turns (num dir)
+  (assert (and (>= num 0) (<= num 3)))
+  (cond ((zerop num)
+	 '(nop))
+	((= num 1)
+	 (list 'turn dir))
+	(t
+	 (list 'progn
+	       (list 'turn dir)
+	       (make-turns (1- num) dir)))))
+
+(defun make-shortest-turn (dir new-dir)
+  (let ((left-dist (+ (- dir new-dir) (if (< dir new-dir) 6 0)))
+	(right-dist (+ (- new-dir dir) (if (< new-dir dir) 6 0))))
+    (if (< left-dist right-dist)
+	(make-turns left-dist 'left)
+      (make-turns right-dist 'right))))
+
+(deflsgmacro my-turn (lr)
+  (if (lisp (eql 'lr 'left))
+      (progn
+	(turn left)
+	(setq dir (lisp (if (= dir 1)
+			    6
+			  (1- dir)))))
+    (progn
+      (turn right)
+      (setq dir (lisp (if (= dir 6)
+			  1
+			(1+ dir)))))))
+
+(deflsgmacro turn-to (new-dir)
+  (progn
+    (lisp (make-shortest-turn dir new-dir))
+    (setq dir new-dir)))
+
+(deflsgmacro turn-home (return-label)
+  (case home here
+	(0
+	 (goto return-label))
+	(7
+	 (goto return-label))
+	(1 (turn-to 1))
+	(2 (turn-to 2))
+	(3 (turn-to 3))
+	(4 (turn-to 4))
+	(5 (turn-to 5))
+	(6 (turn-to 6))))
+
+(deflsgmacro mark-home-direction (direction)
+  (mark home direction))
+
+(defun reverse-direction (dir)
+  (- (+ 3 dir) (if (> dir 3) 6 0)))
+
+(deflsgmacro change-direction-randomly ()
+  (flip-case
+   (turn-to 1)
+   (turn-to 2)
+   (turn-to 3)
+   (turn-to 4)
+   (turn-to 5)
+   (turn-to 6)))
+
+(deflsgmacro turn-around ()
+  (progn
+    (my-turn right)
+    (my-turn right)
+    (my-turn right)))
+
+(defun make-relative-home-case (sense-dir cases dir)
+  (let ((case-label-alist (mapcar #'(lambda (case)
+				      (cons (car case) (make-tmp-name)))
+				  cases))
+	(end-name (make-tmp-name)))
+    (labels ((find-case (name)
+	       (let ((case (assoc name case-label-alist)))
+		 (if case
+		     `((goto ,(cdr case)))
+		     (error "unhandled case ~A in relative-home-case" name)))))
+      `(progn
+	(case home ,sense-dir
+	      ,@(mapcar #'(lambda (i)
+			    (cons i
+				  (cond ((= i 0)
+					 (find-case 't))
+					((= i 7)
+					 (find-case 'nil))
+					(t
+					 (let* ((diff (- i dir))
+						(diff (if (< diff -2)
+							  (+ diff 6)
+							  (if (> diff 3)
+							      (- diff 6)
+							      diff))))
+					   (find-case diff))))))
+			(integers-upto 8)))
+	,@(mapcar #'(lambda (case-code case-label)
+		      `(progn
+			(label ,case-label)
+			,@case-code
+			(goto ,end-name)))
+		  (mapcar #'cdr cases) (mapcar #'cdr case-label-alist))
+	(label ,end-name)))))
+
+;;; cases which must be present: -2, -1, 0, 1, 2, 3, t, nil
+(deflsgmacro relative-home-case (sense-direction &rest body)
+  (lisp (make-relative-home-case 'sense-direction 'body 'dir)))
+
+(deflsgmacro turn-to-free-direction ()
+  (while (sense ahead rock)
+    (change-direction-randomly)
+    ))
+
+(deflsgmacro leave-home-randomly ()
+  (while (sense here home)
+    (change-direction-randomly)
+    (turn-to-free-direction)
+    (while (and (sense here home)
+		(move))
+      (nop))))
+
+(deflsgmacro turn-once-randomly ()
+  (if (flip 2)
+      (my-turn left)
+      (my-turn right)))

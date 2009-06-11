@@ -1,0 +1,36 @@
+arrayeintrag:
+  code
+  live         (default : false)
+  redirection  (default : -1)
+  real_i
+
+
+
+kurd state:
+  if (state is goto)
+    set redirection to goto target
+  else
+    mark state live
+    for each target of state
+      if ! target live
+        kurd target
+
+
+real_i := 0
+for i = 0 to n
+  if array[i].live
+    array[i].real_i := real_i
+    real_i++
+
+follow_redirection target
+  if array[target].redirection != -1
+    follow_redirection array[target].redirection
+  else
+    target
+
+for i = 0 to n
+  if array[i].live
+    for each target in array[i].code
+      follow_redirection
+    output array[i].code with followed redirections (and real_i's)
+

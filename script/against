@@ -1,0 +1,80 @@
+#!/bin/bash
+
+MAX_CONCURRENT_PROCESSES=4
+
+LOGFILE=$(mktemp)
+rm -f $LOGFILE
+TMPFILE=$(mktemp)
+rm -f $TMPFILE
+
+ARGV0=$0
+
+function die {
+    echo "$ARGV0: fatal error: $1" > /dev/stderr
+    exit 2
+}
+
+function usage {
+    echo "$ARGV0: usage: $ARGV0 <ant> | <map> [..]"
+    exit 1
+}
+
+WORLDLIST=""
+ANTLIST=""
+while [ $# != 0 ]
+do
+    case $1 in
+    *.ant)   ANTLIST="$ANTLIST $1";;
+    *.world) WORLDLIST="$WORLDLIST $1";;
+    *) usage;;
+    esac
+    shift
+done
+
+running_counter=1
+
+function maxwait () {
+    if [[ $running_counter > $MAX_CONCURRENT_PROCESSES ]]
+    then
+	wait
+	running_counter=1
+    else
+	let running_counter++
+    fi
+}
+
+function launch () {
+    logfile=$1
+    shift
+    maxwait
+    $* >> $logfile &
+}
+
+for world in $WORLDLIST
+do
+    for ant1 in ../submission/solution-1.ant
+    do
+	for ant2 in $ANTLIST
+	do
+	    [ "$ant1" = "$ant2" ] && continue
+	    launch $LOGFILE ./play $world $ant1 $ant2
+	    launch $LOGFILE ./play $world $ant2 $ant1
+	done
+    done
+done
+
+wait
+
+cat $LOGFILE | ./align-1.7.0/align | sort
+LINECOUNT=$(wc -l $LOGFILE)
+
+rm -f $TMPFILE
+for winner in $(awk '{print $6}' < $LOGFILE | sort -u)
+do
+    echo $winner: $(egrep -c "$winner$" $LOGFILE) >> $TMPFILE
+done
+echo Winner statistics:
+sort -k 2 -n -r < $TMPFILE | ./align-1.7.0/align
+
+#rm -f $LOGFILE
+#rm -f $TMPFILE

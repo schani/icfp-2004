@@ -1,0 +1,94 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ALIGN  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+		http://www.cs.indiana.edu/~kinzler/align
+
+`Align` is a general-purpose text filter tool that helps vertically
+align columns in string-separated tables of input text.  With
+whitespace-separated columns, you can often use it without arguments and
+it'll guess the right thing to do.  Otherwise, you can specify arguments
+to direct how the columns are separated on input and rejoined in the
+aligned output.  For example,
+
+    $ head -5 access.log
+    22.56.17.4 - 04/Dec/2000:04:08:53 GET /pub HTTP/1.0 408 - 23146
+    hrl.com - 04/Dec/2000:07:17:32 GET /zen HTTP/1.0 404 272 27583
+    gw.kpmg.ie - 04/Dec/2000:09:37:56 GET / HTTP/1.0 200 8135 658
+    c1.aici.com - 04/Dec/2000:13:25:00 GET / HTTP/1.1 200 8135 8850
+    dabs.com - 04/Dec/2000:15:04:29 GET / HTTP/1.1 408 - 12305
+
+    $ head -5 access.log | align
+    22.56.17.4  - 04/Dec/2000:04:08:53 GET /pub HTTP/1.0 408 -    23146
+    hrl.com     - 04/Dec/2000:07:17:32 GET /zen HTTP/1.0 404 272  27583
+    gw.kpmg.ie  - 04/Dec/2000:09:37:56 GET /    HTTP/1.0 200 8135   658
+    c1.aici.com - 04/Dec/2000:13:25:00 GET /    HTTP/1.1 200 8135  8850
+    dabs.com    - 04/Dec/2000:15:04:29 GET /    HTTP/1.1 408 -    12305
+
+Here, `align` correctly guessed that columns were separated by a single
+space character and generated an alignment using multiple spaces between
+columns.  Also, the type of alignment within a column can be specified
+to be "left", "right", "center", "numeric" or "zero-padded numeric".
+
+Also included in this package is `width`, another general-purpose text
+filter tool that helps you work with the printing width or length of
+lines of input text.  For example, it can print the width, location
+and/or content for its longest line or lines of input, or for all lines.
+For example,
+
+    % head -5 access.log | width -awnl
+    63:1:22.56.17.4 - 04/Dec/2000:04:08:53 GET /pub HTTP/1.0 408 - 23146
+    63:4:c1.aici.com - 04/Dec/2000:13:25:00 GET / HTTP/1.1 200 8135 8850
+
+Running `align -h` and `width -h` will provide complete usage summaries.
+
+----------------------------  INSTALLATION  ----------------------------
+
+"align" and "width" are Perl scripts that you should be able to install
+as-is, ie executable in a directory in your PATH.  Edit the first
+line of the scripts, if necessary, to contain the proper path to your
+perl executable.  Alternately, you can use the supplied Makefile to do
+all this.  Just edit the top of the Makefile to your desires and then run:
+
+	make
+	make install
+
+---------------------------  GPL COPYRIGHT  ----------------------------
+
+align
+Copyright (C) 2000-2001 Stephen B Kinzler
+width
+Copyright (C) 1993-2001 Stephen B Kinzler
+
+These programs are free software; you can redistribute them and/or modify
+them under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or any
+later version.
+
+These programs are distributed in the hope that they will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with these programs (see the file "COPYING"); if not, write to
+the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+MA 02111-1307 USA
+
+---------------------  SOFTWARE BY STEVE KINZLER  ----------------------
+
+Unix Home Dir	http://www.cs.indiana.edu/~kinzler/home.html
+		Many scripts and config files for Unix/X11 environments
+align		http://www.cs.indiana.edu/~kinzler/align
+		A text column alignment filter
+vshnu		http://www.cs.indiana.edu/~kinzler/vshnu
+		A visual shell and CLI shell supplement
+webrowse	http://www.cs.indiana.edu/~kinzler/webrowse
+		Tools to interface Netscape to the Unix user CLI
+xtitle		http://www.cs.indiana.edu/~kinzler/xtitle
+		Set window title and icon name for an X11 terminal window
+z		http://www.cs.indiana.edu/~kinzler/z
+		A convenience frontend for tar, gzip, zip, etc
+
+========================================================================
+
+Steve Kinzler <kinzler@cs.indiana.edu>			   December 2001
+http://www.cs.indiana.edu/~kinzler

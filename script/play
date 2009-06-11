@@ -1,0 +1,37 @@
+#!/bin/bash
+
+ARGV0=$0
+
+TMPFILE=$(mktemp)
+rm -f $TMPFILE
+
+function die {
+    echo "$ARGV0: fatal error: $1" > /dev/stderr
+    exit 2
+}
+
+[ "$#" = "3" ] || {
+    echo "$ARGV0: usage: $ARGV0 <map> <ant1> <ant2>"
+    exit 1
+}
+
+WORLD=$1
+ANT1=$2
+ANT2=$3
+
+SWORLD=$(basename $WORLD)
+SANT1=$(basename $ANT1)
+SANT2=$(basename $ANT2)
+
+[ -f $WORLD ] || die "map \"$WORLD\" not found"
+[ -f $ANT1 ] || die "ant1 \"$WORLD\" not found"
+[ -f $ANT2 ] || die "ant2 \"$WORLD\" not found"
+
+../simulator/simulator $WORLD $ANT1 $ANT2 2>&1 | awk '/^Red collected:/ { red = $3 } /^Black collected:/ { black = $3 } /^Red/ { sieger = "'$SANT1'"} /^Black/ { sieger = "'$SANT2'" } END { printf "REDCNT=%i\nBLACKCNT=%i\nWINNER=%s\n", red, black, sieger }' > $TMPFILE
+
+source $TMPFILE
+rm -f $TMPFILE
+
+echo "$SWORLD: $SANT1 $SANT2 $REDCNT $BLACKCNT $WINNER"
+exit 0
+

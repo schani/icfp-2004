@@ -1,0 +1,12 @@
+# shortcut to switch all ocmal programs
+
+# opt
+OCAMLC = ocamlopt $(OCAMLC_OPS)
+LIBSUFFIX = cmxa
+OBJSUFFIX = cmx
+
+# bytecode
+#OCAMLC = ocamlc $(OCAMLC_OPS)
+#LIBSUFFIX = cma
+#OBJSUFFIX = cmo
+

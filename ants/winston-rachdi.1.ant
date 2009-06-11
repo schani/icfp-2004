@@ -1,0 +1,1683 @@
+Sense Here 1 1 Friend   ; state 0
+Sense Ahead 4 2 Home   ; state 3
+Sense LeftAhead 4 3 Home   ; state 4
+Sense RightAhead 4 711 Home   ; state 5
+Turn Right 274   ; state 8
+Sense Here 11 17 Home   ; state 53
+Flip 2 1104 1397   ; state 59
+Flip 3 13 14   ; state 67
+Turn Right 283   ; state 69
+Turn Left 1400   ; state 74
+Sense Ahead 11 15 Rock   ; state 81
+Flip 2 12 7   ; state 82
+Flip 3 10 6   ; state 83
+Turn Right 8   ; state 96
+Flip 2 9 286   ; state 101
+Sense Here 16 5 Home   ; state 109
+Move 15 5   ; state 110
+Unmark 0 18   ; state 112
+Unmark 1 19   ; state 113
+Mark 2 23   ; state 114
+Sense Here 21 23 Home   ; state 117
+Move 20 22   ; state 118
+Flip 20 5 20   ; state 120
+Sense Here 24 31 Food   ; state 125
+PickUp 25 25   ; state 126
+Sense Here 65 26 Marker 0   ; state 127
+Sense Here 65 27 Marker 1   ; state 128
+Sense Here 65 28 Marker 2   ; state 129
+Unmark 0 29   ; state 130
+Unmark 1 30   ; state 131
+Mark 2 65   ; state 132
+Sense Here 154 32 Marker 3   ; state 135
+Sense Here 38 33 Marker 0   ; state 137
+Sense Here 38 34 Marker 1   ; state 138
+Sense Here 38 35 Marker 2   ; state 139
+Unmark 0 36   ; state 140
+Unmark 1 37   ; state 141
+Mark 2 38   ; state 142
+Flip 5 39 42   ; state 144
+Flip 2 40 41   ; state 145
+Turn Left 1432   ; state 146
+Turn Right 319   ; state 149
+Move 43 44   ; state 153
+Sense Here 5 23 Home   ; state 154
+Sense Ahead 45 38 Rock   ; state 157
+Flip 2 46 47   ; state 158
+Turn Left 1428   ; state 159
+Turn Right 315   ; state 162
+Sense Here 52 49 Marker 2   ; state 168
+Sense Here 51 50 Marker 1   ; state 169
+Sense Here 58 91 Marker 0   ; state 170
+Sense Here 1444 1151 Marker 0   ; state 175
+Sense Here 57 53 Marker 1   ; state 183
+Sense Here 56 54 Marker 0   ; state 184
+Turn Right 55   ; state 185
+Turn Right 333   ; state 186
+Turn Left 1448   ; state 190
+Sense Here 91 338 Marker 0   ; state 194
+Move 60 59   ; state 199
+Flip 20 105 58   ; state 200
+Sense Here 61 48 Food   ; state 203
+Sense Here 48 62 Home   ; state 204
+Sense Here 65 63 Marker 0   ; state 205
+Sense Here 65 64 Marker 1   ; state 206
+Sense Here 65 48 Marker 2   ; state 207
+Sense Here 69 66 Marker 2   ; state 211
+Sense Here 68 67 Marker 1   ; state 212
+Sense Here 75 91 Marker 0   ; state 213
+Sense Here 1463 1170 Marker 0   ; state 218
+Sense Here 74 70 Marker 1   ; state 226
+Sense Here 73 71 Marker 0   ; state 227
+Turn Right 72   ; state 228
+Turn Right 354   ; state 229
+Turn Left 1467   ; state 233
+Sense Here 91 359 Marker 0   ; state 237
+Mark 3 76   ; state 242
+Move 65 77   ; state 243
+Flip 20 105 76   ; state 244
+Unmark 3 79   ; state 248
+Sense Here 83 80 Marker 2   ; state 249
+Sense Here 82 81 Marker 1   ; state 250
+Sense Here 89 91 Marker 0   ; state 251
+Sense Here 1479 1186 Marker 0   ; state 256
+Sense Here 88 84 Marker 1   ; state 264
+Sense Here 87 85 Marker 0   ; state 265
+Turn Right 86   ; state 266
+Turn Right 372   ; state 267
+Turn Left 1483   ; state 271
+Sense Here 91 377 Marker 0   ; state 275
+Move 78 90   ; state 280
+Flip 50 105 89   ; state 281
+Sense Here 92 105 Home   ; state 285
+Drop 93   ; state 286
+Turn Right 383   ; state 287
+Turn Right 384   ; state 290
+Turn Right 297   ; state 293
+Turn Left 1493   ; state 300
+Turn Right 386   ; state 303
+Move 99 105   ; state 306
+Sense Here 48 100 Marker 0   ; state 307
+Sense Here 48 101 Marker 1   ; state 308
+Sense Here 48 102 Marker 2   ; state 309
+Sense Here 103 104 Home   ; state 311
+Drop 5   ; state 312
+Flip 5 105 98   ; state 314
+Flip 2 96 97   ; state 315
+Flip 2 107 108   ; state 331
+Turn Left 1505   ; state 332
+Turn Right 398   ; state 335
+Move 110 118   ; state 338
+Sense Here 5 111 Home   ; state 339
+Sense Here 117 112 Marker 0   ; state 341
+Sense Here 117 113 Marker 1   ; state 342
+Sense Here 117 114 Marker 2   ; state 343
+Unmark 0 115   ; state 344
+Unmark 1 116   ; state 345
+Mark 2 117   ; state 346
+Flip 4 23 106   ; state 348
+Flip 2 119 120   ; state 351
+Turn Left 1502   ; state 352
+Turn Right 395   ; state 355
+Flip 2 122 133   ; state 359
+Sense RightAhead 123 124 Food   ; state 360
+Turn Right 431   ; state 361
+Sense Ahead 142 125 Food   ; state 364
+Sense LeftAhead 126 127 Food   ; state 366
+Turn Left 1538   ; state 367
+Turn Right 416   ; state 370
+Turn Right 417   ; state 373
+Turn Right 418   ; state 376
+Sense RightAhead 123 131 Food   ; state 379
+Sense Ahead 142 132 Food   ; state 383
+Sense LeftAhead 126 78 Food   ; state 385
+Sense LeftAhead 126 134 Food   ; state 390
+Sense Ahead 142 135 Food   ; state 394
+Sense RightAhead 123 136 Food   ; state 396
+Turn Right 426   ; state 400
+Turn Right 427   ; state 403
+Turn Right 428   ; state 406
+Sense LeftAhead 126 140 Food   ; state 409
+Sense Ahead 142 141 Food   ; state 413
+Sense RightAhead 123 78 Food   ; state 415
+Move 143 152   ; state 420
+Sense Here 5 144 Home   ; state 421
+Sense Here 150 145 Marker 0   ; state 423
+Sense Here 150 146 Marker 1   ; state 424
+Sense Here 150 147 Marker 2   ; state 425
+Unmark 0 148   ; state 426
+Unmark 1 149   ; state 427
+Mark 2 150   ; state 428
+Sense Here 151 121 Food   ; state 430
+PickUp 65 65   ; state 431
+Sense Ahead 153 121 Food   ; state 434
+Flip 30 106 142   ; state 435
+Sense Ahead 173 156 Marker 3   ; state 440
+Sense Ahead 156 174 Marker 1   ; state 442
+Sense LeftAhead 175 159 Marker 3   ; state 445
+Sense LeftAhead 176 159 Marker 1   ; state 447
+Turn Left 1565   ; state 449
+Sense RightAhead 177 162 Marker 3   ; state 452
+Sense RightAhead 162 178 Marker 1   ; state 454
+Turn Right 458   ; state 456
+Turn Left 1559   ; state 459
+Sense LeftAhead 179 165 Marker 3   ; state 462
+Sense LeftAhead 180 165 Marker 1   ; state 464
+Turn Right 455   ; state 469
+Turn Right 470   ; state 472
+Sense RightAhead 182 121 Marker 0   ; state 476
+Sense RightAhead 161 121 Marker 2   ; state 478
+Move 170 183   ; state 483
+Sense Here 171 172 Food   ; state 484
+PickUp 48 48   ; state 485
+Sense Here 154 23 Marker 3   ; state 487
+Sense Ahead 156 155 Marker 0   ; state 489
+Sense Ahead 169 156 Marker 2   ; state 491
+Sense LeftAhead 157 159 Marker 0   ; state 494
+Sense LeftAhead 159 158 Marker 2   ; state 496
+Sense RightAhead 160 162 Marker 0   ; state 501
+Sense RightAhead 161 162 Marker 2   ; state 503
+Sense LeftAhead 164 165 Marker 0   ; state 511
+Sense LeftAhead 165 158 Marker 2   ; state 513
+Sense RightAhead 167 121 Marker 3   ; state 523
+Sense RightAhead 121 168 Marker 1   ; state 525
+Flip 30 106 169   ; state 533
+Turn Left 712   ; state 539
+Turn Left 713   ; state 541
+Turn Left 714   ; state 543
+Turn Left 715   ; state 545
+Turn Left 716   ; state 547
+Turn Left 717   ; state 549
+Turn Left 718   ; state 551
+Turn Left 719   ; state 553
+Turn Left 720   ; state 555
+Turn Left 721   ; state 557
+Turn Left 722   ; state 559
+Turn Left 723   ; state 561
+Turn Left 724   ; state 563
+Turn Left 725   ; state 565
+Turn Left 726   ; state 567
+Turn Left 727   ; state 569
+Turn Left 728   ; state 571
+Turn Left 729   ; state 573
+Turn Left 730   ; state 575
+Turn Left 731   ; state 577
+Turn Left 732   ; state 579
+Turn Left 733   ; state 581
+Turn Left 734   ; state 583
+Turn Left 735   ; state 585
+Turn Left 736   ; state 587
+Turn Left 737   ; state 589
+Turn Left 738   ; state 591
+Turn Left 739   ; state 593
+Turn Left 740   ; state 595
+Turn Left 214   ; state 597
+Sense Ahead 217 215 Home   ; state 601
+Sense LeftAhead 217 216 Home   ; state 602
+Sense RightAhead 217 266 Home   ; state 603
+Turn Right 218   ; state 606
+Turn Right 219   ; state 607
+Turn Right 1039   ; state 608
+Sense Ahead 221 222 Home   ; state 617
+Turn Right 474   ; state 618
+Sense LeftAhead 225 223 Home   ; state 621
+Sense RightAhead 224 225 Home   ; state 622
+Sense Ahead 226 225 Home   ; state 623
+Turn Right 476   ; state 624
+Move 227 242   ; state 627
+Sense Here 228 229 Food   ; state 628
+PickUp 229 229   ; state 629
+Sense Ahead 226 230 Home   ; state 631
+Sense Ahead 233 231 Home   ; state 636
+Sense LeftAhead 233 232 Home   ; state 637
+Sense RightAhead 233 266 Home   ; state 638
+Turn Right 234   ; state 641
+Turn Right 235   ; state 642
+Turn Right 1054   ; state 643
+Sense Ahead 237 238 Home   ; state 651
+Turn Right 485   ; state 652
+Sense LeftAhead 241 239 Home   ; state 655
+Sense RightAhead 240 241 Home   ; state 656
+Sense Ahead 226 241 Home   ; state 657
+Turn Right 487   ; state 658
+Sense Here 226 243 FriendWithFood   ; state 661
+Turn Right 493   ; state 663
+Sense Ahead 245 260 Home   ; state 666
+Move 246 247   ; state 667
+Turn Left 1658   ; state 668
+Flip 5 248 257   ; state 671
+Flip 2 254 259   ; state 672
+Flip 2 1373 1664   ; state 677
+Turn Right 500   ; state 687
+Turn Left 1666   ; state 692
+Sense Ahead 253 260 Home   ; state 700
+Move 252 248   ; state 701
+Flip 3 252 249   ; state 704
+Turn Right 250   ; state 717
+Flip 2 251 503   ; state 722
+Sense Ahead 258 260 Home   ; state 733
+Move 257 248   ; state 734
+Flip 3 255 256   ; state 749
+Sense Ahead 261 262 Home   ; state 767
+Turn Right 513   ; state 768
+Sense LeftAhead 265 263 Home   ; state 771
+Sense RightAhead 264 265 Home   ; state 772
+Sense Ahead 226 265 Home   ; state 773
+Turn Right 515   ; state 774
+Sense Here 267 268 FriendWithFood   ; state 778
+Drop 268   ; state 779
+Sense Ahead 272 269 Home   ; state 784
+Turn Right 270   ; state 786
+Turn Right 271   ; state 787
+Turn Right 1095   ; state 788
+Sense RightAhead 273 272 FriendWithFood   ; state 791
+Turn Left 1682   ; state 793
+Sense Ahead 277 275 Home   ; state 809
+Sense LeftAhead 277 276 Home   ; state 810
+Sense RightAhead 277 473 Home   ; state 811
+Turn Right 519   ; state 814
+Sense Here 288 294 Home   ; state 851
+Flip 3 280 289   ; state 853
+Turn Left 10   ; state 854
+Turn Right 531   ; state 861
+Flip 3 8 290   ; state 864
+Turn Right 797   ; state 866
+Turn Right 528   ; state 870
+Turn Right 1108   ; state 872
+Turn Left 1401   ; state 876
+Sense Ahead 288 292 Rock   ; state 879
+Flip 2 279 282   ; state 880
+Flip 2 287 281   ; state 885
+Flip 2 284 291   ; state 897
+Turn Left 286   ; state 903
+Sense Here 293 278 Home   ; state 907
+Move 292 278   ; state 908
+Mark 0 295   ; state 910
+Unmark 1 296   ; state 911
+Mark 2 300   ; state 912
+Sense Here 298 300 Home   ; state 915
+Move 297 299   ; state 916
+Flip 20 278 297   ; state 918
+Sense Here 301 308 Food   ; state 923
+PickUp 302 302   ; state 924
+Sense Here 346 303 Marker 0   ; state 925
+Sense Here 346 304 Marker 1   ; state 926
+Sense Here 346 305 Marker 2   ; state 927
+Mark 0 306   ; state 928
+Unmark 1 307   ; state 929
+Mark 2 346   ; state 930
+Sense Here 443 309 Marker 3   ; state 933
+Sense Here 315 310 Marker 0   ; state 935
+Sense Here 315 311 Marker 1   ; state 936
+Sense Here 315 312 Marker 2   ; state 937
+Mark 0 313   ; state 938
+Unmark 1 314   ; state 939
+Mark 2 315   ; state 940
+Flip 5 316 319   ; state 942
+Flip 2 317 318   ; state 943
+Turn Left 42   ; state 944
+Turn Right 562   ; state 947
+Move 320 321   ; state 951
+Sense Here 278 300 Home   ; state 952
+Sense Ahead 322 315 Rock   ; state 955
+Flip 2 323 324   ; state 956
+Turn Left 38   ; state 957
+Turn Right 558   ; state 960
+Sense Here 331 326 Marker 2   ; state 966
+Sense Here 329 327 Marker 1   ; state 967
+Sense Here 328 380 Marker 0   ; state 968
+Turn Left 58   ; state 970
+Sense Here 330 339 Marker 0   ; state 973
+Turn Right 580   ; state 977
+Sense Here 336 332 Marker 1   ; state 980
+Sense Here 334 55 Marker 0   ; state 981
+Turn Right 847   ; state 983
+Turn Right 576   ; state 986
+Turn Right 1157   ; state 988
+Sense Here 380 337 Marker 0   ; state 991
+Turn Left 338   ; state 992
+Turn Left 1450   ; state 993
+Move 341 340   ; state 997
+Flip 20 393 339   ; state 998
+Sense Here 342 325 Food   ; state 1001
+Sense Here 325 343 Home   ; state 1002
+Sense Here 346 344 Marker 0   ; state 1003
+Sense Here 346 345 Marker 1   ; state 1004
+Sense Here 346 325 Marker 2   ; state 1005
+Sense Here 352 347 Marker 2   ; state 1009
+Sense Here 350 348 Marker 1   ; state 1010
+Sense Here 349 380 Marker 0   ; state 1011
+Turn Left 75   ; state 1013
+Sense Here 351 360 Marker 0   ; state 1016
+Turn Right 599   ; state 1020
+Sense Here 357 353 Marker 1   ; state 1023
+Sense Here 355 72 Marker 0   ; state 1024
+Turn Right 866   ; state 1026
+Turn Right 595   ; state 1029
+Turn Right 1176   ; state 1031
+Sense Here 380 358 Marker 0   ; state 1034
+Turn Left 359   ; state 1035
+Turn Left 1469   ; state 1036
+Mark 3 361   ; state 1040
+Move 346 362   ; state 1041
+Flip 20 393 361   ; state 1042
+Unmark 3 364   ; state 1046
+Sense Here 370 365 Marker 2   ; state 1047
+Sense Here 368 366 Marker 1   ; state 1048
+Sense Here 367 380 Marker 0   ; state 1049
+Turn Left 89   ; state 1051
+Sense Here 369 378 Marker 0   ; state 1054
+Turn Right 615   ; state 1058
+Sense Here 375 371 Marker 1   ; state 1061
+Sense Here 373 86 Marker 0   ; state 1062
+Turn Right 882   ; state 1064
+Turn Right 611   ; state 1067
+Turn Right 1192   ; state 1069
+Sense Here 380 376 Marker 0   ; state 1072
+Turn Left 377   ; state 1073
+Turn Left 1485   ; state 1074
+Move 363 379   ; state 1078
+Flip 50 393 378   ; state 1079
+Sense Here 381 393 Home   ; state 1083
+Drop 382   ; state 1084
+Turn Right 620   ; state 1085
+Turn Right 621   ; state 1088
+Turn Right 540   ; state 1091
+Turn Right 623   ; state 1101
+Move 387 393   ; state 1104
+Sense Here 325 388 Marker 0   ; state 1105
+Sense Here 325 389 Marker 1   ; state 1106
+Sense Here 325 390 Marker 2   ; state 1107
+Sense Here 391 392 Home   ; state 1109
+Drop 278   ; state 1110
+Flip 5 393 386   ; state 1112
+Flip 2 394 385   ; state 1113
+Turn Left 98   ; state 1114
+Flip 2 396 397   ; state 1129
+Turn Left 109   ; state 1130
+Turn Right 635   ; state 1133
+Move 399 407   ; state 1136
+Sense Here 278 400 Home   ; state 1137
+Sense Here 406 401 Marker 0   ; state 1139
+Sense Here 406 402 Marker 1   ; state 1140
+Sense Here 406 403 Marker 2   ; state 1141
+Mark 0 404   ; state 1142
+Unmark 1 405   ; state 1143
+Mark 2 406   ; state 1144
+Flip 4 300 395   ; state 1146
+Flip 2 408 409   ; state 1149
+Turn Left 106   ; state 1150
+Turn Right 632   ; state 1153
+Flip 2 411 422   ; state 1157
+Sense RightAhead 412 413 Food   ; state 1158
+Turn Right 668   ; state 1159
+Sense Ahead 431 414 Food   ; state 1162
+Sense LeftAhead 421 415 Food   ; state 1164
+Turn Right 653   ; state 1168
+Turn Right 654   ; state 1171
+Turn Right 655   ; state 1174
+Sense RightAhead 412 419 Food   ; state 1177
+Sense Ahead 431 420 Food   ; state 1181
+Sense LeftAhead 421 363 Food   ; state 1183
+Turn Left 142   ; state 1184
+Sense LeftAhead 421 423 Food   ; state 1188
+Sense Ahead 431 424 Food   ; state 1192
+Sense RightAhead 412 425 Food   ; state 1194
+Turn Right 663   ; state 1198
+Turn Right 664   ; state 1201
+Turn Right 665   ; state 1204
+Sense LeftAhead 421 429 Food   ; state 1207
+Sense Ahead 431 430 Food   ; state 1211
+Sense RightAhead 412 363 Food   ; state 1213
+Move 432 441   ; state 1218
+Sense Here 278 433 Home   ; state 1219
+Sense Here 439 434 Marker 0   ; state 1221
+Sense Here 439 435 Marker 1   ; state 1222
+Sense Here 439 436 Marker 2   ; state 1223
+Mark 0 437   ; state 1224
+Unmark 1 438   ; state 1225
+Mark 2 439   ; state 1226
+Sense Here 440 410 Food   ; state 1228
+PickUp 346 346   ; state 1229
+Sense Ahead 442 410 Food   ; state 1232
+Flip 30 395 431   ; state 1233
+Sense Ahead 462 445 Marker 3   ; state 1238
+Sense Ahead 445 463 Marker 1   ; state 1240
+Sense LeftAhead 464 448 Marker 3   ; state 1243
+Sense LeftAhead 448 465 Marker 1   ; state 1245
+Turn Left 169   ; state 1247
+Sense RightAhead 466 451 Marker 3   ; state 1250
+Sense RightAhead 467 451 Marker 1   ; state 1252
+Turn Right 695   ; state 1254
+Turn Left 163   ; state 1257
+Sense LeftAhead 468 454 Marker 3   ; state 1260
+Sense LeftAhead 454 469 Marker 1   ; state 1262
+Turn Right 692   ; state 1267
+Turn Right 707   ; state 1270
+Sense RightAhead 410 471 Marker 0   ; state 1274
+Sense RightAhead 450 410 Marker 2   ; state 1276
+Move 459 472   ; state 1281
+Sense Here 460 461 Food   ; state 1282
+PickUp 325 325   ; state 1283
+Sense Here 443 300 Marker 3   ; state 1285
+Sense Ahead 444 445 Marker 0   ; state 1287
+Sense Ahead 458 445 Marker 2   ; state 1289
+Sense LeftAhead 448 446 Marker 0   ; state 1292
+Sense LeftAhead 447 448 Marker 2   ; state 1294
+Sense RightAhead 451 449 Marker 0   ; state 1299
+Sense RightAhead 450 451 Marker 2   ; state 1301
+Sense LeftAhead 454 453 Marker 0   ; state 1309
+Sense LeftAhead 447 454 Marker 2   ; state 1311
+Sense RightAhead 456 410 Marker 3   ; state 1321
+Sense RightAhead 457 410 Marker 1   ; state 1323
+Flip 30 395 458   ; state 1331
+Turn Left 711   ; state 1336
+Sense Ahead 475 476 Home   ; state 1414
+Turn Right 741   ; state 1415
+Sense LeftAhead 479 477 Home   ; state 1418
+Sense RightAhead 478 479 Home   ; state 1419
+Sense Ahead 480 479 Home   ; state 1420
+Turn Right 743   ; state 1421
+Move 481 491   ; state 1424
+Sense Here 482 483 Food   ; state 1425
+PickUp 483 483   ; state 1426
+Sense Ahead 480 484 Home   ; state 1428
+Turn Left 230   ; state 1430
+Sense Ahead 486 487 Home   ; state 1447
+Turn Right 752   ; state 1448
+Sense LeftAhead 490 488 Home   ; state 1451
+Sense RightAhead 489 490 Home   ; state 1452
+Sense Ahead 480 490 Home   ; state 1453
+Turn Right 754   ; state 1454
+Sense Here 480 492 FriendWithFood   ; state 1457
+Turn Right 760   ; state 1459
+Sense Ahead 494 513 Home   ; state 1462
+Move 495 496   ; state 1463
+Turn Left 244   ; state 1464
+Flip 5 497 509   ; state 1467
+Flip 2 511 512   ; state 1468
+Turn Left 252   ; state 1470
+Turn Right 770   ; state 1477
+Turn Right 1075   ; state 1482
+Turn Right 767   ; state 1486
+Turn Right 1377   ; state 1488
+Turn Left 1667   ; state 1492
+Sense Ahead 505 513 Home   ; state 1496
+Move 504 497   ; state 1497
+Flip 2 504 499   ; state 1504
+Flip 2 501 508   ; state 1516
+Turn Left 503   ; state 1522
+Sense Ahead 510 513 Home   ; state 1529
+Move 509 497   ; state 1530
+Flip 3 498 506   ; state 1533
+Flip 3 250 507   ; state 1544
+Sense Ahead 514 515 Home   ; state 1563
+Turn Right 778   ; state 1564
+Sense LeftAhead 518 516 Home   ; state 1567
+Sense RightAhead 517 518 Home   ; state 1568
+Sense Ahead 480 518 Home   ; state 1569
+Turn Right 780   ; state 1570
+Sense Ahead 522 520 Home   ; state 1613
+Sense LeftAhead 522 521 Home   ; state 1614
+Sense RightAhead 522 710 Home   ; state 1615
+Turn Right 785   ; state 1618
+Sense Here 532 537 Home   ; state 1646
+Flip 3 525 533   ; state 1648
+Turn Left 280   ; state 1649
+Turn Left 287   ; state 1654
+Flip 3 283 534   ; state 1660
+Turn Right 285   ; state 1665
+Turn Right 796   ; state 1669
+Turn Right 1401   ; state 1671
+Sense Ahead 532 535 Rock   ; state 1674
+Flip 2 524 527   ; state 1675
+Flip 2 526 531   ; state 1681
+Flip 2 528 529   ; state 1692
+Sense Here 536 523 Home   ; state 1702
+Move 535 523   ; state 1703
+Unmark 0 538   ; state 1705
+Mark 1 539   ; state 1706
+Mark 2 543   ; state 1707
+Sense Here 541 543 Home   ; state 1710
+Move 540 542   ; state 1711
+Flip 20 523 540   ; state 1713
+Sense Here 544 551 Food   ; state 1718
+PickUp 545 545   ; state 1719
+Sense Here 587 546 Marker 0   ; state 1720
+Sense Here 587 547 Marker 1   ; state 1721
+Sense Here 587 548 Marker 2   ; state 1722
+Unmark 0 549   ; state 1723
+Mark 1 550   ; state 1724
+Mark 2 587   ; state 1725
+Sense Here 680 552 Marker 3   ; state 1728
+Sense Here 558 553 Marker 0   ; state 1730
+Sense Here 558 554 Marker 1   ; state 1731
+Sense Here 558 555 Marker 2   ; state 1732
+Unmark 0 556   ; state 1733
+Mark 1 557   ; state 1734
+Mark 2 558   ; state 1735
+Flip 5 559 562   ; state 1737
+Flip 2 560 561   ; state 1738
+Turn Left 319   ; state 1739
+Turn Right 829   ; state 1742
+Move 563 564   ; state 1746
+Sense Here 523 543 Home   ; state 1747
+Sense Ahead 565 558 Rock   ; state 1750
+Flip 2 566 567   ; state 1751
+Turn Left 315   ; state 1752
+Turn Right 825   ; state 1755
+Sense Here 574 569 Marker 2   ; state 1761
+Sense Here 572 570 Marker 1   ; state 1762
+Sense Here 571 617 Marker 0   ; state 1763
+Turn Left 328   ; state 1765
+Sense Here 580 573 Marker 0   ; state 1769
+Turn Left 339   ; state 1770
+Sense Here 577 575 Marker 1   ; state 1776
+Sense Here 576 333 Marker 0   ; state 1777
+Turn Right 335   ; state 1781
+Sense Here 617 578 Marker 0   ; state 1785
+Turn Right 846   ; state 1786
+Turn Right 1450   ; state 1788
+Move 582 581   ; state 1792
+Flip 20 630 580   ; state 1793
+Sense Here 583 568 Food   ; state 1796
+Sense Here 568 584 Home   ; state 1797
+Sense Here 587 585 Marker 0   ; state 1798
+Sense Here 587 586 Marker 1   ; state 1799
+Sense Here 587 568 Marker 2   ; state 1800
+Sense Here 593 588 Marker 2   ; state 1804
+Sense Here 591 589 Marker 1   ; state 1805
+Sense Here 590 617 Marker 0   ; state 1806
+Turn Left 349   ; state 1808
+Sense Here 599 592 Marker 0   ; state 1812
+Turn Left 360   ; state 1813
+Sense Here 596 594 Marker 1   ; state 1819
+Sense Here 595 354 Marker 0   ; state 1820
+Turn Right 356   ; state 1824
+Sense Here 617 597 Marker 0   ; state 1828
+Turn Right 865   ; state 1829
+Turn Right 1469   ; state 1831
+Mark 3 600   ; state 1835
+Move 587 601   ; state 1836
+Flip 20 630 600   ; state 1837
+Unmark 3 603   ; state 1841
+Sense Here 609 604 Marker 2   ; state 1842
+Sense Here 607 605 Marker 1   ; state 1843
+Sense Here 606 617 Marker 0   ; state 1844
+Turn Left 367   ; state 1846
+Sense Here 615 608 Marker 0   ; state 1850
+Turn Left 378   ; state 1851
+Sense Here 612 610 Marker 1   ; state 1857
+Sense Here 611 372 Marker 0   ; state 1858
+Turn Right 374   ; state 1862
+Sense Here 617 613 Marker 0   ; state 1866
+Turn Right 881   ; state 1867
+Turn Right 1485   ; state 1869
+Move 602 616   ; state 1873
+Flip 50 630 615   ; state 1874
+Sense Here 618 630 Home   ; state 1878
+Drop 619   ; state 1879
+Turn Right 887   ; state 1880
+Turn Right 888   ; state 1883
+Turn Right 807   ; state 1886
+Turn Right 890   ; state 1896
+Move 624 630   ; state 1899
+Sense Here 568 625 Marker 0   ; state 1900
+Sense Here 568 626 Marker 1   ; state 1901
+Sense Here 568 627 Marker 2   ; state 1902
+Sense Here 628 629 Home   ; state 1904
+Drop 523   ; state 1905
+Flip 5 630 623   ; state 1907
+Flip 2 631 622   ; state 1908
+Turn Left 386   ; state 1909
+Flip 2 633 634   ; state 1924
+Turn Left 398   ; state 1925
+Turn Right 902   ; state 1928
+Move 636 644   ; state 1931
+Sense Here 523 637 Home   ; state 1932
+Sense Here 643 638 Marker 0   ; state 1934
+Sense Here 643 639 Marker 1   ; state 1935
+Sense Here 643 640 Marker 2   ; state 1936
+Unmark 0 641   ; state 1937
+Mark 1 642   ; state 1938
+Mark 2 643   ; state 1939
+Flip 4 543 632   ; state 1941
+Flip 2 645 646   ; state 1944
+Turn Left 395   ; state 1945
+Turn Right 899   ; state 1948
+Flip 2 648 659   ; state 1952
+Sense RightAhead 649 650 Food   ; state 1953
+Turn Right 935   ; state 1954
+Sense Ahead 668 651 Food   ; state 1957
+Sense LeftAhead 658 652 Food   ; state 1959
+Turn Right 920   ; state 1963
+Turn Right 921   ; state 1966
+Turn Right 922   ; state 1969
+Sense RightAhead 649 656 Food   ; state 1972
+Sense Ahead 668 657 Food   ; state 1976
+Sense LeftAhead 658 602 Food   ; state 1978
+Turn Left 431   ; state 1979
+Sense LeftAhead 658 660 Food   ; state 1983
+Sense Ahead 668 661 Food   ; state 1987
+Sense RightAhead 649 662 Food   ; state 1989
+Turn Right 930   ; state 1993
+Turn Right 931   ; state 1996
+Turn Right 932   ; state 1999
+Sense LeftAhead 658 666 Food   ; state 2002
+Sense Ahead 668 667 Food   ; state 2006
+Sense RightAhead 649 602 Food   ; state 2008
+Move 669 678   ; state 2013
+Sense Here 523 670 Home   ; state 2014
+Sense Here 676 671 Marker 0   ; state 2016
+Sense Here 676 672 Marker 1   ; state 2017
+Sense Here 676 673 Marker 2   ; state 2018
+Unmark 0 674   ; state 2019
+Mark 1 675   ; state 2020
+Mark 2 676   ; state 2021
+Sense Here 677 647 Food   ; state 2023
+PickUp 587 587   ; state 2024
+Sense Ahead 679 647 Food   ; state 2027
+Flip 30 632 668   ; state 2028
+Sense Ahead 699 682 Marker 3   ; state 2033
+Sense Ahead 700 682 Marker 1   ; state 2035
+Sense LeftAhead 701 685 Marker 3   ; state 2038
+Sense LeftAhead 685 702 Marker 1   ; state 2040
+Turn Left 458   ; state 2042
+Sense RightAhead 703 688 Marker 3   ; state 2045
+Sense RightAhead 688 704 Marker 1   ; state 2047
+Turn Right 962   ; state 2049
+Turn Left 452   ; state 2052
+Sense LeftAhead 705 691 Marker 3   ; state 2055
+Sense LeftAhead 691 706 Marker 1   ; state 2057
+Turn Right 959   ; state 2062
+Turn Right 974   ; state 2065
+Sense RightAhead 708 647 Marker 0   ; state 2069
+Sense RightAhead 647 687 Marker 2   ; state 2071
+Move 696 709   ; state 2076
+Sense Here 697 698 Food   ; state 2077
+PickUp 568 568   ; state 2078
+Sense Here 680 543 Marker 3   ; state 2080
+Sense Ahead 682 681 Marker 0   ; state 2082
+Sense Ahead 695 682 Marker 2   ; state 2084
+Sense LeftAhead 683 685 Marker 0   ; state 2087
+Sense LeftAhead 684 685 Marker 2   ; state 2089
+Sense RightAhead 686 688 Marker 0   ; state 2094
+Sense RightAhead 688 687 Marker 2   ; state 2096
+Sense LeftAhead 690 691 Marker 0   ; state 2104
+Sense LeftAhead 684 691 Marker 2   ; state 2106
+Sense RightAhead 693 647 Marker 3   ; state 2116
+Sense RightAhead 647 694 Marker 1   ; state 2118
+Flip 30 632 695   ; state 2126
+Turn Left 473   ; state 2131
+Turn Left 184   ; state 2133
+Turn Left 185   ; state 2135
+Turn Left 186   ; state 2137
+Turn Left 187   ; state 2139
+Turn Left 188   ; state 2141
+Turn Left 189   ; state 2143
+Turn Left 190   ; state 2145
+Turn Left 191   ; state 2147
+Turn Left 192   ; state 2149
+Turn Left 193   ; state 2151
+Turn Left 194   ; state 2153
+Turn Left 195   ; state 2155
+Turn Left 196   ; state 2157
+Turn Left 197   ; state 2159
+Turn Left 198   ; state 2161
+Turn Left 199   ; state 2163
+Turn Left 200   ; state 2165
+Turn Left 201   ; state 2167
+Turn Left 202   ; state 2169
+Turn Left 203   ; state 2171
+Turn Left 204   ; state 2173
+Turn Left 205   ; state 2175
+Turn Left 206   ; state 2177
+Turn Left 207   ; state 2179
+Turn Left 208   ; state 2181
+Turn Left 209   ; state 2183
+Turn Left 210   ; state 2185
+Turn Left 211   ; state 2187
+Turn Left 212   ; state 2189
+Turn Left 213   ; state 2191
+Sense Ahead 742 743 Home   ; state 2209
+Turn Right 1042   ; state 2210
+Sense LeftAhead 746 744 Home   ; state 2213
+Sense RightAhead 745 746 Home   ; state 2214
+Sense Ahead 747 746 Home   ; state 2215
+Turn Right 1044   ; state 2216
+Move 748 758   ; state 2219
+Sense Here 749 750 Food   ; state 2220
+PickUp 750 750   ; state 2221
+Sense Ahead 747 751 Home   ; state 2223
+Turn Left 484   ; state 2225
+Sense Ahead 753 754 Home   ; state 2242
+Turn Right 1057   ; state 2243
+Sense LeftAhead 757 755 Home   ; state 2246
+Sense RightAhead 756 757 Home   ; state 2247
+Sense Ahead 747 757 Home   ; state 2248
+Turn Right 1059   ; state 2249
+Sense Here 747 759 FriendWithFood   ; state 2252
+Turn Right 1065   ; state 2254
+Sense Ahead 761 778 Home   ; state 2257
+Move 762 763   ; state 2258
+Turn Left 493   ; state 2259
+Flip 5 764 774   ; state 2262
+Flip 2 776 777   ; state 2263
+Turn Left 498   ; state 2265
+Turn Left 504   ; state 2270
+Turn Right 502   ; state 2281
+Turn Right 1074   ; state 2285
+Turn Right 1667   ; state 2287
+Sense Ahead 771 778 Home   ; state 2291
+Move 770 764   ; state 2292
+Flip 2 766 770   ; state 2300
+Flip 2 767 768   ; state 2311
+Sense Ahead 775 778 Home   ; state 2324
+Move 774 764   ; state 2325
+Flip 3 765 772   ; state 2328
+Flip 3 500 773   ; state 2340
+Sense Ahead 779 780 Home   ; state 2358
+Turn Right 1084   ; state 2359
+Sense LeftAhead 783 781 Home   ; state 2362
+Sense RightAhead 782 783 Home   ; state 2363
+Sense Ahead 747 783 Home   ; state 2364
+Turn Right 1086   ; state 2365
+Move 741 741   ; state 2386
+Sense Ahead 788 786 Home   ; state 2418
+Sense LeftAhead 788 787 Home   ; state 2419
+Sense RightAhead 788 977 Home   ; state 2420
+Turn Right 1097   ; state 2423
+Sense Here 798 804 Home   ; state 2441
+Flip 3 791 800   ; state 2443
+Turn Right 799   ; state 2444
+Turn Right 10   ; state 2446
+Turn Left 526   ; state 2450
+Turn Left 531   ; state 2454
+Flip 3 797 801   ; state 2457
+Turn Right 530   ; state 2465
+Sense Ahead 798 802 Rock   ; state 2469
+Flip 2 790 795   ; state 2470
+Turn Right 792   ; state 2473
+Flip 2 793 794   ; state 2477
+Flip 2 285 796   ; state 2489
+Sense Here 803 789 Home   ; state 2497
+Move 802 789   ; state 2498
+Mark 0 805   ; state 2500
+Unmark 1 806   ; state 2501
+Unmark 2 810   ; state 2502
+Sense Here 808 810 Home   ; state 2505
+Move 807 809   ; state 2506
+Flip 20 789 807   ; state 2508
+Sense Here 811 818 Food   ; state 2513
+PickUp 812 812   ; state 2514
+Sense Here 854 813 Marker 0   ; state 2515
+Sense Here 854 814 Marker 1   ; state 2516
+Sense Here 854 815 Marker 2   ; state 2517
+Mark 0 816   ; state 2518
+Unmark 1 817   ; state 2519
+Unmark 2 854   ; state 2520
+Sense Here 947 819 Marker 3   ; state 2523
+Sense Here 825 820 Marker 0   ; state 2525
+Sense Here 825 821 Marker 1   ; state 2526
+Sense Here 825 822 Marker 2   ; state 2527
+Mark 0 823   ; state 2528
+Unmark 1 824   ; state 2529
+Unmark 2 825   ; state 2530
+Flip 5 826 829   ; state 2532
+Flip 2 827 828   ; state 2533
+Turn Left 562   ; state 2534
+Turn Right 1139   ; state 2537
+Move 830 831   ; state 2541
+Sense Here 789 810 Home   ; state 2542
+Sense Ahead 832 825 Rock   ; state 2545
+Flip 2 833 834   ; state 2546
+Turn Left 558   ; state 2547
+Turn Right 1135   ; state 2550
+Sense Here 843 836 Marker 2   ; state 2556
+Sense Here 840 837 Marker 1   ; state 2557
+Sense Here 838 884 Marker 0   ; state 2558
+Turn Right 1148   ; state 2560
+Turn Right 58   ; state 2562
+Sense Here 842 841 Marker 0   ; state 2565
+Turn Left 573   ; state 2566
+Turn Left 580   ; state 2570
+Sense Here 845 844 Marker 1   ; state 2573
+Sense Here 335 847 Marker 0   ; state 2574
+Sense Here 884 846 Marker 0   ; state 2581
+Turn Right 579   ; state 2582
+Move 849 848   ; state 2587
+Flip 20 897 847   ; state 2588
+Sense Here 850 835 Food   ; state 2591
+Sense Here 835 851 Home   ; state 2592
+Sense Here 854 852 Marker 0   ; state 2593
+Sense Here 854 853 Marker 1   ; state 2594
+Sense Here 854 835 Marker 2   ; state 2595
+Sense Here 862 855 Marker 2   ; state 2599
+Sense Here 859 856 Marker 1   ; state 2600
+Sense Here 857 884 Marker 0   ; state 2601
+Turn Right 1167   ; state 2603
+Turn Right 75   ; state 2605
+Sense Here 861 860 Marker 0   ; state 2608
+Turn Left 592   ; state 2609
+Turn Left 599   ; state 2613
+Sense Here 864 863 Marker 1   ; state 2616
+Sense Here 356 866 Marker 0   ; state 2617
+Sense Here 884 865 Marker 0   ; state 2624
+Turn Right 598   ; state 2625
+Mark 3 867   ; state 2630
+Move 854 868   ; state 2631
+Flip 20 897 867   ; state 2632
+Unmark 3 870   ; state 2636
+Sense Here 878 871 Marker 2   ; state 2637
+Sense Here 875 872 Marker 1   ; state 2638
+Sense Here 873 884 Marker 0   ; state 2639
+Turn Right 1183   ; state 2641
+Turn Right 89   ; state 2643
+Sense Here 877 876 Marker 0   ; state 2646
+Turn Left 608   ; state 2647
+Turn Left 615   ; state 2651
+Sense Here 880 879 Marker 1   ; state 2654
+Sense Here 374 882 Marker 0   ; state 2655
+Sense Here 884 881 Marker 0   ; state 2662
+Turn Right 614   ; state 2663
+Move 869 883   ; state 2668
+Flip 50 897 882   ; state 2669
+Sense Here 885 897 Home   ; state 2673
+Drop 886   ; state 2674
+Turn Right 1197   ; state 2675
+Turn Right 1198   ; state 2678
+Turn Right 1117   ; state 2681
+Turn Right 1200   ; state 2691
+Move 891 897   ; state 2694
+Sense Here 835 892 Marker 0   ; state 2695
+Sense Here 835 893 Marker 1   ; state 2696
+Sense Here 835 894 Marker 2   ; state 2697
+Sense Here 895 896 Home   ; state 2699
+Drop 789   ; state 2700
+Flip 5 897 890   ; state 2702
+Flip 2 898 889   ; state 2703
+Turn Left 623   ; state 2704
+Flip 2 900 901   ; state 2719
+Turn Left 635   ; state 2720
+Turn Right 1212   ; state 2723
+Move 903 911   ; state 2726
+Sense Here 789 904 Home   ; state 2727
+Sense Here 910 905 Marker 0   ; state 2729
+Sense Here 910 906 Marker 1   ; state 2730
+Sense Here 910 907 Marker 2   ; state 2731
+Mark 0 908   ; state 2732
+Unmark 1 909   ; state 2733
+Unmark 2 910   ; state 2734
+Flip 4 810 899   ; state 2736
+Flip 2 912 913   ; state 2739
+Turn Left 632   ; state 2740
+Turn Right 1209   ; state 2743
+Flip 2 915 926   ; state 2747
+Sense RightAhead 916 917 Food   ; state 2748
+Turn Right 1245   ; state 2749
+Sense Ahead 935 918 Food   ; state 2752
+Sense LeftAhead 925 919 Food   ; state 2754
+Turn Right 1230   ; state 2758
+Turn Right 1231   ; state 2761
+Turn Right 1232   ; state 2764
+Sense RightAhead 916 923 Food   ; state 2767
+Sense Ahead 935 924 Food   ; state 2771
+Sense LeftAhead 925 869 Food   ; state 2773
+Turn Left 668   ; state 2774
+Sense LeftAhead 925 927 Food   ; state 2778
+Sense Ahead 935 928 Food   ; state 2782
+Sense RightAhead 916 929 Food   ; state 2784
+Turn Right 1240   ; state 2788
+Turn Right 1241   ; state 2791
+Turn Right 1242   ; state 2794
+Sense LeftAhead 925 933 Food   ; state 2797
+Sense Ahead 935 934 Food   ; state 2801
+Sense RightAhead 916 869 Food   ; state 2803
+Move 936 945   ; state 2808
+Sense Here 789 937 Home   ; state 2809
+Sense Here 943 938 Marker 0   ; state 2811
+Sense Here 943 939 Marker 1   ; state 2812
+Sense Here 943 940 Marker 2   ; state 2813
+Mark 0 941   ; state 2814
+Unmark 1 942   ; state 2815
+Unmark 2 943   ; state 2816
+Sense Here 944 914 Food   ; state 2818
+PickUp 854 854   ; state 2819
+Sense Ahead 946 914 Food   ; state 2822
+Flip 30 899 935   ; state 2823
+Sense Ahead 966 949 Marker 3   ; state 2828
+Sense Ahead 949 967 Marker 1   ; state 2830
+Sense LeftAhead 968 952 Marker 3   ; state 2833
+Sense LeftAhead 969 952 Marker 1   ; state 2835
+Turn Left 695   ; state 2837
+Sense RightAhead 970 955 Marker 3   ; state 2840
+Sense RightAhead 971 955 Marker 1   ; state 2842
+Turn Right 1272   ; state 2844
+Turn Left 689   ; state 2847
+Sense LeftAhead 972 958 Marker 3   ; state 2850
+Sense LeftAhead 973 958 Marker 1   ; state 2852
+Turn Right 1269   ; state 2857
+Turn Right 1284   ; state 2860
+Sense RightAhead 914 975 Marker 0   ; state 2864
+Sense RightAhead 914 954 Marker 2   ; state 2866
+Move 963 976   ; state 2871
+Sense Here 964 965 Food   ; state 2872
+PickUp 835 835   ; state 2873
+Sense Here 947 810 Marker 3   ; state 2875
+Sense Ahead 948 949 Marker 0   ; state 2877
+Sense Ahead 949 962 Marker 2   ; state 2879
+Sense LeftAhead 952 950 Marker 0   ; state 2882
+Sense LeftAhead 951 952 Marker 2   ; state 2884
+Sense RightAhead 955 953 Marker 0   ; state 2889
+Sense RightAhead 955 954 Marker 2   ; state 2891
+Sense LeftAhead 958 957 Marker 0   ; state 2899
+Sense LeftAhead 951 958 Marker 2   ; state 2901
+Sense RightAhead 960 914 Marker 3   ; state 2911
+Sense RightAhead 961 914 Marker 1   ; state 2913
+Flip 30 899 962   ; state 2921
+Turn Left 978   ; state 2926
+Turn Left 979   ; state 2927
+Turn Left 980   ; state 2928
+Turn Left 981   ; state 2929
+Turn Left 982   ; state 2930
+Turn Left 983   ; state 2931
+Turn Left 984   ; state 2932
+Turn Left 985   ; state 2933
+Turn Left 986   ; state 2934
+Turn Left 987   ; state 2935
+Turn Left 988   ; state 2936
+Turn Left 989   ; state 2937
+Turn Left 990   ; state 2938
+Turn Left 991   ; state 2939
+Turn Left 992   ; state 2940
+Turn Left 993   ; state 2941
+Turn Left 994   ; state 2942
+Turn Left 995   ; state 2943
+Turn Left 996   ; state 2944
+Turn Left 997   ; state 2945
+Turn Left 998   ; state 2946
+Turn Left 999   ; state 2947
+Turn Left 1000   ; state 2948
+Turn Left 1001   ; state 2949
+Turn Left 1002   ; state 2950
+Turn Left 1003   ; state 2951
+Turn Left 1004   ; state 2952
+Turn Left 1005   ; state 2953
+Turn Left 1006   ; state 2954
+Turn Left 1007   ; state 2955
+Turn Left 1008   ; state 2956
+Turn Left 1009   ; state 2957
+Turn Left 1010   ; state 2958
+Turn Left 1011   ; state 2959
+Turn Left 1012   ; state 2960
+Turn Left 1013   ; state 2961
+Turn Left 1014   ; state 2962
+Turn Left 1015   ; state 2963
+Turn Left 1016   ; state 2964
+Turn Left 1017   ; state 2965
+Turn Left 1018   ; state 2966
+Turn Left 1019   ; state 2967
+Turn Left 1020   ; state 2968
+Turn Left 1021   ; state 2969
+Turn Left 1022   ; state 2970
+Turn Left 1023   ; state 2971
+Turn Left 1024   ; state 2972
+Turn Left 1025   ; state 2973
+Turn Left 1026   ; state 2974
+Turn Left 1027   ; state 2975
+Turn Left 1028   ; state 2976
+Turn Left 1029   ; state 2977
+Turn Left 1030   ; state 2978
+Turn Left 1031   ; state 2979
+Turn Left 1032   ; state 2980
+Turn Left 1033   ; state 2981
+Turn Left 1034   ; state 2982
+Turn Left 1035   ; state 2983
+Turn Left 1036   ; state 2984
+Turn Left 1037   ; state 2985
+Turn Right 1347   ; state 2986
+Turn Right 214   ; state 2988
+Sense Ahead 1042 1040 Home   ; state 2999
+Sense LeftAhead 1042 1041 Home   ; state 3000
+Sense RightAhead 1042 1090 Home   ; state 3001
+Sense Ahead 1043 1044 Home   ; state 3005
+Turn Right 1348   ; state 3006
+Sense LeftAhead 1047 1045 Home   ; state 3009
+Sense RightAhead 1046 1047 Home   ; state 3010
+Sense Ahead 1048 1047 Home   ; state 3011
+Turn Right 1350   ; state 3012
+Move 1049 1063   ; state 3015
+Sense Here 1050 1051 Food   ; state 3016
+PickUp 1051 1051   ; state 3017
+Sense Ahead 1048 1052 Home   ; state 3019
+Turn Right 1358   ; state 3021
+Turn Right 230   ; state 3023
+Sense Ahead 1057 1055 Home   ; state 3034
+Sense LeftAhead 1057 1056 Home   ; state 3035
+Sense RightAhead 1057 1090 Home   ; state 3036
+Sense Ahead 1058 1059 Home   ; state 3039
+Turn Right 1359   ; state 3040
+Sense LeftAhead 1062 1060 Home   ; state 3043
+Sense RightAhead 1061 1062 Home   ; state 3044
+Sense Ahead 1048 1062 Home   ; state 3045
+Turn Right 1361   ; state 3046
+Sense Here 1048 1064 FriendWithFood   ; state 3049
+Turn Right 1367   ; state 3051
+Sense Ahead 1066 1084 Home   ; state 3054
+Move 1067 1068   ; state 3055
+Turn Left 760   ; state 3056
+Flip 5 1069 1079   ; state 3059
+Flip 2 1081 1083   ; state 3060
+Turn Right 1082   ; state 3062
+Turn Right 252   ; state 3064
+Turn Left 766   ; state 3068
+Turn Left 770   ; state 3072
+Turn Right 769   ; state 3083
+Sense Ahead 1076 1084 Home   ; state 3088
+Move 1075 1069   ; state 3089
+Flip 2 1072 1073   ; state 3098
+Flip 2 502 1074   ; state 3110
+Sense Ahead 1080 1084 Home   ; state 3121
+Move 1079 1069   ; state 3122
+Flip 3 1070 1077   ; state 3125
+Turn Right 1071   ; state 3127
+Flip 3 1075 1078   ; state 3139
+Sense Ahead 1085 1086 Home   ; state 3155
+Turn Right 1384   ; state 3156
+Sense LeftAhead 1089 1087 Home   ; state 3159
+Sense RightAhead 1088 1089 Home   ; state 3160
+Sense Ahead 1048 1089 Home   ; state 3161
+Turn Right 1386   ; state 3162
+Sense Here 1091 1092 FriendWithFood   ; state 3166
+Drop 1092   ; state 3167
+Turn Right 1093   ; state 3169
+Turn Right 1094   ; state 3170
+Turn Right 268   ; state 3171
+Sense RightAhead 1096 1095 FriendWithFood   ; state 3179
+Turn Left 784   ; state 3181
+Sense Ahead 1100 1098 Home   ; state 3225
+Sense LeftAhead 1100 1099 Home   ; state 3226
+Sense RightAhead 1100 1287 Home   ; state 3227
+Turn Right 1390   ; state 3230
+Sense Here 1109 1114 Home   ; state 3239
+Flip 3 799 1110   ; state 3241
+Turn Right 1396   ; state 3247
+Turn Right 287   ; state 3249
+Turn Left 794   ; state 3252
+Turn Left 797   ; state 3257
+Flip 2 1108 530   ; state 3260
+Sense Ahead 1109 1112 Rock   ; state 3267
+Flip 2 1102 1111   ; state 3268
+Flip 2 1103 1105   ; state 3274
+Flip 3 1106 1107   ; state 3284
+Sense Here 1113 1101 Home   ; state 3295
+Move 1112 1101   ; state 3296
+Unmark 0 1115   ; state 3298
+Mark 1 1116   ; state 3299
+Unmark 2 1120   ; state 3300
+Sense Here 1118 1120 Home   ; state 3303
+Move 1117 1119   ; state 3304
+Flip 20 1101 1117   ; state 3306
+Sense Here 1121 1128 Food   ; state 3311
+PickUp 1122 1122   ; state 3312
+Sense Here 1164 1123 Marker 0   ; state 3313
+Sense Here 1164 1124 Marker 1   ; state 3314
+Sense Here 1164 1125 Marker 2   ; state 3315
+Unmark 0 1126   ; state 3316
+Mark 1 1127   ; state 3317
+Unmark 2 1164   ; state 3318
+Sense Here 1257 1129 Marker 3   ; state 3321
+Sense Here 1135 1130 Marker 0   ; state 3323
+Sense Here 1135 1131 Marker 1   ; state 3324
+Sense Here 1135 1132 Marker 2   ; state 3325
+Unmark 0 1133   ; state 3326
+Mark 1 1134   ; state 3327
+Unmark 2 1135   ; state 3328
+Flip 5 1136 1139   ; state 3330
+Flip 2 1137 1138   ; state 3331
+Turn Left 829   ; state 3332
+Turn Right 1432   ; state 3335
+Move 1140 1141   ; state 3339
+Sense Here 1101 1120 Home   ; state 3340
+Sense Ahead 1142 1135 Rock   ; state 3343
+Flip 2 1143 1144   ; state 3344
+Turn Left 825   ; state 3345
+Turn Right 1428   ; state 3348
+Sense Here 1153 1146 Marker 2   ; state 3354
+Sense Here 1149 1147 Marker 1   ; state 3355
+Sense Here 1148 1194 Marker 0   ; state 3356
+Turn Right 839   ; state 3358
+Sense Here 1152 1150 Marker 0   ; state 3362
+Turn Right 1442   ; state 3363
+Turn Right 339   ; state 3365
+Turn Left 842   ; state 3368
+Sense Here 1156 1154 Marker 1   ; state 3372
+Sense Here 1157 1155 Marker 0   ; state 3373
+Turn Left 847   ; state 3374
+Sense Here 1194 579 Marker 0   ; state 3380
+Move 1159 1158   ; state 3385
+Flip 20 1207 1157   ; state 3386
+Sense Here 1160 1145 Food   ; state 3389
+Sense Here 1145 1161 Home   ; state 3390
+Sense Here 1164 1162 Marker 0   ; state 3391
+Sense Here 1164 1163 Marker 1   ; state 3392
+Sense Here 1164 1145 Marker 2   ; state 3393
+Sense Here 1172 1165 Marker 2   ; state 3397
+Sense Here 1168 1166 Marker 1   ; state 3398
+Sense Here 1167 1194 Marker 0   ; state 3399
+Turn Right 858   ; state 3401
+Sense Here 1171 1169 Marker 0   ; state 3405
+Turn Right 1461   ; state 3406
+Turn Right 360   ; state 3408
+Turn Left 861   ; state 3411
+Sense Here 1175 1173 Marker 1   ; state 3415
+Sense Here 1176 1174 Marker 0   ; state 3416
+Turn Left 866   ; state 3417
+Sense Here 1194 598 Marker 0   ; state 3423
+Mark 3 1177   ; state 3428
+Move 1164 1178   ; state 3429
+Flip 20 1207 1177   ; state 3430
+Unmark 3 1180   ; state 3434
+Sense Here 1188 1181 Marker 2   ; state 3435
+Sense Here 1184 1182 Marker 1   ; state 3436
+Sense Here 1183 1194 Marker 0   ; state 3437
+Turn Right 874   ; state 3439
+Sense Here 1187 1185 Marker 0   ; state 3443
+Turn Right 1477   ; state 3444
+Turn Right 378   ; state 3446
+Turn Left 877   ; state 3449
+Sense Here 1191 1189 Marker 1   ; state 3453
+Sense Here 1192 1190 Marker 0   ; state 3454
+Turn Left 882   ; state 3455
+Sense Here 1194 614 Marker 0   ; state 3461
+Move 1179 1193   ; state 3466
+Flip 50 1207 1192   ; state 3467
+Sense Here 1195 1207 Home   ; state 3471
+Drop 1196   ; state 3472
+Turn Right 1490   ; state 3473
+Turn Right 1491   ; state 3476
+Turn Right 1410   ; state 3479
+Turn Right 1493   ; state 3489
+Move 1201 1207   ; state 3492
+Sense Here 1145 1202 Marker 0   ; state 3493
+Sense Here 1145 1203 Marker 1   ; state 3494
+Sense Here 1145 1204 Marker 2   ; state 3495
+Sense Here 1205 1206 Home   ; state 3497
+Drop 1101   ; state 3498
+Flip 5 1207 1200   ; state 3500
+Flip 2 1208 1199   ; state 3501
+Turn Left 890   ; state 3502
+Flip 2 1210 1211   ; state 3517
+Turn Left 902   ; state 3518
+Turn Right 1505   ; state 3521
+Move 1213 1221   ; state 3524
+Sense Here 1101 1214 Home   ; state 3525
+Sense Here 1220 1215 Marker 0   ; state 3527
+Sense Here 1220 1216 Marker 1   ; state 3528
+Sense Here 1220 1217 Marker 2   ; state 3529
+Unmark 0 1218   ; state 3530
+Mark 1 1219   ; state 3531
+Unmark 2 1220   ; state 3532
+Flip 4 1120 1209   ; state 3534
+Flip 2 1222 1223   ; state 3537
+Turn Left 899   ; state 3538
+Turn Right 1502   ; state 3541
+Flip 2 1225 1236   ; state 3545
+Sense RightAhead 1226 1227 Food   ; state 3546
+Turn Right 1538   ; state 3547
+Sense Ahead 1245 1228 Food   ; state 3550
+Sense LeftAhead 1235 1229 Food   ; state 3552
+Turn Right 1523   ; state 3556
+Turn Right 1524   ; state 3559
+Turn Right 1525   ; state 3562
+Sense RightAhead 1226 1233 Food   ; state 3565
+Sense Ahead 1245 1234 Food   ; state 3569
+Sense LeftAhead 1235 1179 Food   ; state 3571
+Turn Left 935   ; state 3572
+Sense LeftAhead 1235 1237 Food   ; state 3576
+Sense Ahead 1245 1238 Food   ; state 3580
+Sense RightAhead 1226 1239 Food   ; state 3582
+Turn Right 1533   ; state 3586
+Turn Right 1534   ; state 3589
+Turn Right 1535   ; state 3592
+Sense LeftAhead 1235 1243 Food   ; state 3595
+Sense Ahead 1245 1244 Food   ; state 3599
+Sense RightAhead 1226 1179 Food   ; state 3601
+Move 1246 1255   ; state 3606
+Sense Here 1101 1247 Home   ; state 3607
+Sense Here 1253 1248 Marker 0   ; state 3609
+Sense Here 1253 1249 Marker 1   ; state 3610
+Sense Here 1253 1250 Marker 2   ; state 3611
+Unmark 0 1251   ; state 3612
+Mark 1 1252   ; state 3613
+Unmark 2 1253   ; state 3614
+Sense Here 1254 1224 Food   ; state 3616
+PickUp 1164 1164   ; state 3617
+Sense Ahead 1256 1224 Food   ; state 3620
+Flip 30 1209 1245   ; state 3621
+Sense Ahead 1276 1259 Marker 3   ; state 3626
+Sense Ahead 1277 1259 Marker 1   ; state 3628
+Sense LeftAhead 1278 1262 Marker 3   ; state 3631
+Sense LeftAhead 1262 1279 Marker 1   ; state 3633
+Turn Left 962   ; state 3635
+Sense RightAhead 1280 1265 Marker 3   ; state 3638
+Sense RightAhead 1281 1265 Marker 1   ; state 3640
+Turn Right 1565   ; state 3642
+Turn Left 956   ; state 3645
+Sense LeftAhead 1282 1268 Marker 3   ; state 3648
+Sense LeftAhead 1268 1283 Marker 1   ; state 3650
+Turn Right 1562   ; state 3655
+Turn Right 1577   ; state 3658
+Sense RightAhead 1285 1224 Marker 0   ; state 3662
+Sense RightAhead 1224 1264 Marker 2   ; state 3664
+Move 1273 1286   ; state 3669
+Sense Here 1274 1275 Food   ; state 3670
+PickUp 1145 1145   ; state 3671
+Sense Here 1257 1120 Marker 3   ; state 3673
+Sense Ahead 1259 1258 Marker 0   ; state 3675
+Sense Ahead 1259 1272 Marker 2   ; state 3677
+Sense LeftAhead 1260 1262 Marker 0   ; state 3680
+Sense LeftAhead 1262 1261 Marker 2   ; state 3682
+Sense RightAhead 1263 1265 Marker 0   ; state 3687
+Sense RightAhead 1265 1264 Marker 2   ; state 3689
+Sense LeftAhead 1267 1268 Marker 0   ; state 3697
+Sense LeftAhead 1268 1261 Marker 2   ; state 3699
+Sense RightAhead 1270 1224 Marker 3   ; state 3709
+Sense RightAhead 1271 1224 Marker 1   ; state 3711
+Flip 30 1209 1272   ; state 3719
+Turn Left 1288   ; state 3724
+Turn Left 1289   ; state 3725
+Turn Left 1290   ; state 3726
+Turn Left 1291   ; state 3727
+Turn Left 1292   ; state 3728
+Turn Left 1293   ; state 3729
+Turn Left 1294   ; state 3730
+Turn Left 1295   ; state 3731
+Turn Left 1296   ; state 3732
+Turn Left 1297   ; state 3733
+Turn Left 1298   ; state 3734
+Turn Left 1299   ; state 3735
+Turn Left 1300   ; state 3736
+Turn Left 1301   ; state 3737
+Turn Left 1302   ; state 3738
+Turn Left 1303   ; state 3739
+Turn Left 1304   ; state 3740
+Turn Left 1305   ; state 3741
+Turn Left 1306   ; state 3742
+Turn Left 1307   ; state 3743
+Turn Left 1308   ; state 3744
+Turn Left 1309   ; state 3745
+Turn Left 1310   ; state 3746
+Turn Left 1311   ; state 3747
+Turn Left 1312   ; state 3748
+Turn Left 1313   ; state 3749
+Turn Left 1314   ; state 3750
+Turn Left 1315   ; state 3751
+Turn Left 1316   ; state 3752
+Turn Left 1317   ; state 3753
+Turn Left 1318   ; state 3754
+Turn Left 1319   ; state 3755
+Turn Left 1320   ; state 3756
+Turn Left 1321   ; state 3757
+Turn Left 1322   ; state 3758
+Turn Left 1323   ; state 3759
+Turn Left 1324   ; state 3760
+Turn Left 1325   ; state 3761
+Turn Left 1326   ; state 3762
+Turn Left 1327   ; state 3763
+Turn Left 1328   ; state 3764
+Turn Left 1329   ; state 3765
+Turn Left 1330   ; state 3766
+Turn Left 1331   ; state 3767
+Turn Left 1332   ; state 3768
+Turn Left 1333   ; state 3769
+Turn Left 1334   ; state 3770
+Turn Left 1335   ; state 3771
+Turn Left 1336   ; state 3772
+Turn Left 1337   ; state 3773
+Turn Left 1338   ; state 3774
+Turn Left 1339   ; state 3775
+Turn Left 1340   ; state 3776
+Turn Left 1341   ; state 3777
+Turn Left 1342   ; state 3778
+Turn Left 1343   ; state 3779
+Turn Left 1344   ; state 3780
+Turn Left 1345   ; state 3781
+Turn Left 1346   ; state 3782
+Turn Left 1347   ; state 3783
+Turn Right 1038   ; state 3784
+Sense Ahead 1349 1350 Home   ; state 3802
+Turn Right 1640   ; state 3803
+Sense LeftAhead 1353 1351 Home   ; state 3806
+Sense RightAhead 1352 1353 Home   ; state 3807
+Sense Ahead 1354 1353 Home   ; state 3808
+Turn Right 1642   ; state 3809
+Move 1355 1365   ; state 3812
+Sense Here 1356 1357 Food   ; state 3813
+PickUp 1357 1357   ; state 3814
+Sense Ahead 1354 1358 Home   ; state 3816
+Turn Right 1053   ; state 3818
+Sense Ahead 1360 1361 Home   ; state 3835
+Turn Right 1650   ; state 3836
+Sense LeftAhead 1364 1362 Home   ; state 3839
+Sense RightAhead 1363 1364 Home   ; state 3840
+Sense Ahead 1354 1364 Home   ; state 3841
+Turn Right 1652   ; state 3842
+Sense Here 1354 1366 FriendWithFood   ; state 3845
+Turn Right 1658   ; state 3847
+Sense Ahead 1368 1384 Home   ; state 3850
+Move 1369 1370   ; state 3851
+Turn Left 1065   ; state 3852
+Flip 5 1371 1381   ; state 3855
+Flip 2 1383 1380   ; state 3856
+Turn Right 1663   ; state 3863
+Turn Right 504   ; state 3865
+Turn Left 1073   ; state 3868
+Turn Left 1075   ; state 3873
+Flip 2 1377 769   ; state 3876
+Sense Ahead 1378 1384 Home   ; state 3884
+Move 1377 1371   ; state 3885
+Flip 2 1372 1374   ; state 3893
+Flip 3 1375 1376   ; state 3903
+Sense Ahead 1382 1384 Home   ; state 3917
+Move 1381 1371   ; state 3918
+Flip 3 1082 1379   ; state 3921
+Sense Ahead 1385 1386 Home   ; state 3951
+Turn Right 1676   ; state 3952
+Sense LeftAhead 1389 1387 Home   ; state 3955
+Sense RightAhead 1388 1389 Home   ; state 3956
+Sense Ahead 1354 1389 Home   ; state 3957
+Turn Right 1678   ; state 3958
+Sense Ahead 1393 1391 Home   ; state 4028
+Sense LeftAhead 1393 1392 Home   ; state 4029
+Sense RightAhead 1393 1580 Home   ; state 4030
+Sense Here 1394 1407 Home   ; state 4034
+Flip 2 1402 1398   ; state 4035
+Flip 2 1396 1403   ; state 4040
+Turn Right 1104   ; state 4041
+Turn Right 281   ; state 4046
+Flip 3 1399 1404   ; state 4050
+Turn Left 1106   ; state 4051
+Turn Left 1108   ; state 4056
+Sense Ahead 1394 1405 Rock   ; state 4062
+Flip 3 792 1395   ; state 4064
+Turn Right 1397   ; state 4073
+Flip 2 1400 1401   ; state 4083
+Sense Here 1406 1393 Home   ; state 4090
+Move 1405 1393   ; state 4091
+Mark 0 1408   ; state 4093
+Mark 1 1409   ; state 4094
+Unmark 2 1413   ; state 4095
+Sense Here 1411 1413 Home   ; state 4098
+Move 1410 1412   ; state 4099
+Flip 20 1393 1410   ; state 4101
+Sense Here 1414 1421 Food   ; state 4106
+PickUp 1415 1415   ; state 4107
+Sense Here 1457 1416 Marker 0   ; state 4108
+Sense Here 1457 1417 Marker 1   ; state 4109
+Sense Here 1457 1418 Marker 2   ; state 4110
+Mark 0 1419   ; state 4111
+Mark 1 1420   ; state 4112
+Unmark 2 1457   ; state 4113
+Sense Here 1550 1422 Marker 3   ; state 4116
+Sense Here 1428 1423 Marker 0   ; state 4118
+Sense Here 1428 1424 Marker 1   ; state 4119
+Sense Here 1428 1425 Marker 2   ; state 4120
+Mark 0 1426   ; state 4121
+Mark 1 1427   ; state 4122
+Unmark 2 1428   ; state 4123
+Flip 5 1429 1432   ; state 4125
+Flip 2 1430 1431   ; state 4126
+Turn Left 1139   ; state 4127
+Turn Right 42   ; state 4130
+Move 1433 1434   ; state 4134
+Sense Here 1393 1413 Home   ; state 4135
+Sense Ahead 1435 1428 Rock   ; state 4138
+Flip 2 1436 1437   ; state 4139
+Turn Left 1135   ; state 4140
+Turn Right 38   ; state 4143
+Sense Here 1445 1439 Marker 2   ; state 4149
+Sense Here 1441 1440 Marker 1   ; state 4150
+Sense Here 839 1487 Marker 0   ; state 4151
+Sense Here 1443 1442 Marker 0   ; state 4156
+Turn Right 1151   ; state 4157
+Turn Right 1444   ; state 4161
+Turn Right 330   ; state 4162
+Sense Here 1449 1446 Marker 1   ; state 4166
+Sense Here 1448 1447 Marker 0   ; state 4167
+Turn Left 1155   ; state 4168
+Turn Left 1157   ; state 4172
+Sense Here 1487 1450 Marker 0   ; state 4175
+Move 1452 1451   ; state 4180
+Flip 20 1501 1450   ; state 4181
+Sense Here 1453 1438 Food   ; state 4184
+Sense Here 1438 1454 Home   ; state 4185
+Sense Here 1457 1455 Marker 0   ; state 4186
+Sense Here 1457 1456 Marker 1   ; state 4187
+Sense Here 1457 1438 Marker 2   ; state 4188
+Sense Here 1464 1458 Marker 2   ; state 4192
+Sense Here 1460 1459 Marker 1   ; state 4193
+Sense Here 858 1487 Marker 0   ; state 4194
+Sense Here 1462 1461 Marker 0   ; state 4199
+Turn Right 1170   ; state 4200
+Turn Right 1463   ; state 4204
+Turn Right 351   ; state 4205
+Sense Here 1468 1465 Marker 1   ; state 4209
+Sense Here 1467 1466 Marker 0   ; state 4210
+Turn Left 1174   ; state 4211
+Turn Left 1176   ; state 4215
+Sense Here 1487 1469 Marker 0   ; state 4218
+Mark 3 1470   ; state 4223
+Move 1457 1471   ; state 4224
+Flip 20 1501 1470   ; state 4225
+Unmark 3 1473   ; state 4229
+Sense Here 1480 1474 Marker 2   ; state 4230
+Sense Here 1476 1475 Marker 1   ; state 4231
+Sense Here 874 1487 Marker 0   ; state 4232
+Sense Here 1478 1477 Marker 0   ; state 4237
+Turn Right 1186   ; state 4238
+Turn Right 1479   ; state 4242
+Turn Right 369   ; state 4243
+Sense Here 1484 1481 Marker 1   ; state 4247
+Sense Here 1483 1482 Marker 0   ; state 4248
+Turn Left 1190   ; state 4249
+Turn Left 1192   ; state 4253
+Sense Here 1487 1485 Marker 0   ; state 4256
+Move 1472 1486   ; state 4261
+Flip 50 1501 1485   ; state 4262
+Sense Here 1488 1501 Home   ; state 4266
+Drop 1489   ; state 4267
+Turn Right 94   ; state 4268
+Turn Right 95   ; state 4271
+Turn Right 20   ; state 4274
+Turn Right 98   ; state 4284
+Move 1494 1501   ; state 4287
+Sense Here 1438 1495 Marker 0   ; state 4288
+Sense Here 1438 1496 Marker 1   ; state 4289
+Sense Here 1438 1497 Marker 2   ; state 4290
+Sense Here 1498 1499 Home   ; state 4292
+Drop 1393   ; state 4293
+Flip 5 1501 1493   ; state 4295
+Turn Left 1200   ; state 4297
+Flip 2 1500 1492   ; state 4304
+Flip 2 1503 1504   ; state 4312
+Turn Left 1212   ; state 4313
+Turn Right 109   ; state 4316
+Move 1506 1514   ; state 4319
+Sense Here 1393 1507 Home   ; state 4320
+Sense Here 1513 1508 Marker 0   ; state 4322
+Sense Here 1513 1509 Marker 1   ; state 4323
+Sense Here 1513 1510 Marker 2   ; state 4324
+Mark 0 1511   ; state 4325
+Mark 1 1512   ; state 4326
+Unmark 2 1513   ; state 4327
+Flip 4 1413 1502   ; state 4329
+Flip 2 1515 1516   ; state 4332
+Turn Left 1209   ; state 4333
+Turn Right 106   ; state 4336
+Flip 2 1518 1529   ; state 4340
+Sense RightAhead 1519 1520 Food   ; state 4341
+Turn Right 142   ; state 4342
+Sense Ahead 1538 1521 Food   ; state 4345
+Sense LeftAhead 1528 1522 Food   ; state 4347
+Turn Right 128   ; state 4351
+Turn Right 129   ; state 4354
+Turn Right 130   ; state 4357
+Sense RightAhead 1519 1526 Food   ; state 4360
+Sense Ahead 1538 1527 Food   ; state 4364
+Sense LeftAhead 1528 1472 Food   ; state 4366
+Turn Left 1245   ; state 4367
+Sense LeftAhead 1528 1530 Food   ; state 4371
+Sense Ahead 1538 1531 Food   ; state 4375
+Sense RightAhead 1519 1532 Food   ; state 4377
+Turn Right 137   ; state 4381
+Turn Right 138   ; state 4384
+Turn Right 139   ; state 4387
+Sense LeftAhead 1528 1536 Food   ; state 4390
+Sense Ahead 1538 1537 Food   ; state 4394
+Sense RightAhead 1519 1472 Food   ; state 4396
+Move 1539 1548   ; state 4401
+Sense Here 1393 1540 Home   ; state 4402
+Sense Here 1546 1541 Marker 0   ; state 4404
+Sense Here 1546 1542 Marker 1   ; state 4405
+Sense Here 1546 1543 Marker 2   ; state 4406
+Mark 0 1544   ; state 4407
+Mark 1 1545   ; state 4408
+Unmark 2 1546   ; state 4409
+Sense Here 1547 1517 Food   ; state 4411
+PickUp 1457 1457   ; state 4412
+Sense Ahead 1549 1517 Food   ; state 4415
+Flip 30 1502 1538   ; state 4416
+Sense Ahead 1569 1552 Marker 3   ; state 4421
+Sense Ahead 1570 1552 Marker 1   ; state 4423
+Sense LeftAhead 1571 1555 Marker 3   ; state 4426
+Sense LeftAhead 1572 1555 Marker 1   ; state 4428
+Turn Left 1272   ; state 4430
+Sense RightAhead 1573 1558 Marker 3   ; state 4433
+Sense RightAhead 1558 1574 Marker 1   ; state 4435
+Turn Right 169   ; state 4437
+Turn Left 1266   ; state 4440
+Sense LeftAhead 1575 1561 Marker 3   ; state 4443
+Sense LeftAhead 1576 1561 Marker 1   ; state 4445
+Turn Right 166   ; state 4450
+Turn Right 181   ; state 4453
+Sense RightAhead 1517 1578 Marker 0   ; state 4457
+Sense RightAhead 1557 1517 Marker 2   ; state 4459
+Move 1566 1579   ; state 4464
+Sense Here 1567 1568 Food   ; state 4465
+PickUp 1438 1438   ; state 4466
+Sense Here 1550 1413 Marker 3   ; state 4468
+Sense Ahead 1551 1552 Marker 0   ; state 4470
+Sense Ahead 1552 1565 Marker 2   ; state 4472
+Sense LeftAhead 1555 1553 Marker 0   ; state 4475
+Sense LeftAhead 1555 1554 Marker 2   ; state 4477
+Sense RightAhead 1558 1556 Marker 0   ; state 4482
+Sense RightAhead 1557 1558 Marker 2   ; state 4484
+Sense LeftAhead 1561 1560 Marker 0   ; state 4492
+Sense LeftAhead 1561 1554 Marker 2   ; state 4494
+Sense RightAhead 1563 1517 Marker 3   ; state 4504
+Sense RightAhead 1517 1564 Marker 1   ; state 4506
+Flip 30 1502 1565   ; state 4514
+Turn Left 1581   ; state 4519
+Turn Left 1582   ; state 4520
+Turn Left 1583   ; state 4521
+Turn Left 1584   ; state 4522
+Turn Left 1585   ; state 4523
+Turn Left 1586   ; state 4524
+Turn Left 1587   ; state 4525
+Turn Left 1588   ; state 4526
+Turn Left 1589   ; state 4527
+Turn Left 1590   ; state 4528
+Turn Left 1591   ; state 4529
+Turn Left 1592   ; state 4530
+Turn Left 1593   ; state 4531
+Turn Left 1594   ; state 4532
+Turn Left 1595   ; state 4533
+Turn Left 1596   ; state 4534
+Turn Left 1597   ; state 4535
+Turn Left 1598   ; state 4536
+Turn Left 1599   ; state 4537
+Turn Left 1600   ; state 4538
+Turn Left 1601   ; state 4539
+Turn Left 1602   ; state 4540
+Turn Left 1603   ; state 4541
+Turn Left 1604   ; state 4542
+Turn Left 1605   ; state 4543
+Turn Left 1606   ; state 4544
+Turn Left 1607   ; state 4545
+Turn Left 1608   ; state 4546
+Turn Left 1609   ; state 4547
+Turn Left 1610   ; state 4548
+Turn Left 1611   ; state 4549
+Turn Left 1612   ; state 4550
+Turn Left 1613   ; state 4551
+Turn Left 1614   ; state 4552
+Turn Left 1615   ; state 4553
+Turn Left 1616   ; state 4554
+Turn Left 1617   ; state 4555
+Turn Left 1618   ; state 4556
+Turn Left 1619   ; state 4557
+Turn Left 1620   ; state 4558
+Turn Left 1621   ; state 4559
+Turn Left 1622   ; state 4560
+Turn Left 1623   ; state 4561
+Turn Left 1624   ; state 4562
+Turn Left 1625   ; state 4563
+Turn Left 1626   ; state 4564
+Turn Left 1627   ; state 4565
+Turn Left 1628   ; state 4566
+Turn Left 1629   ; state 4567
+Turn Left 1630   ; state 4568
+Turn Left 1631   ; state 4569
+Turn Left 1632   ; state 4570
+Turn Left 1633   ; state 4571
+Turn Left 1634   ; state 4572
+Turn Left 1635   ; state 4573
+Turn Left 1636   ; state 4574
+Turn Left 1637   ; state 4575
+Turn Left 1638   ; state 4576
+Turn Left 1639   ; state 4577
+Turn Left 1038   ; state 4578
+Sense Ahead 1641 1642 Home   ; state 4597
+Turn Right 220   ; state 4598
+Sense LeftAhead 1645 1643 Home   ; state 4601
+Sense RightAhead 1644 1645 Home   ; state 4602
+Sense Ahead 1646 1645 Home   ; state 4603
+Turn Right 222   ; state 4604
+Move 1647 1656   ; state 4607
+Sense Here 1648 1649 Food   ; state 4608
+PickUp 1649 1649   ; state 4609
+Sense Ahead 1646 1053 Home   ; state 4611
+Sense Ahead 1651 1652 Home   ; state 4630
+Turn Right 236   ; state 4631
+Sense LeftAhead 1655 1653 Home   ; state 4634
+Sense RightAhead 1654 1655 Home   ; state 4635
+Sense Ahead 1646 1655 Home   ; state 4636
+Turn Right 238   ; state 4637
+Sense Here 1646 1657 FriendWithFood   ; state 4640
+Turn Right 244   ; state 4642
+Sense Ahead 1659 1676 Home   ; state 4645
+Move 1660 1661   ; state 4646
+Turn Left 1367   ; state 4647
+Flip 5 1669 1672   ; state 4650
+Flip 3 1071 1674   ; state 4652
+Turn Right 1373   ; state 4657
+Turn Right 499   ; state 4662
+Turn Left 1375   ; state 4667
+Turn Left 1377   ; state 4672
+Sense Ahead 1668 1676 Home   ; state 4679
+Move 1667 1669   ; state 4680
+Flip 2 1662 1675   ; state 4682
+Turn Right 1664   ; state 4692
+Flip 2 1666 1667   ; state 4702
+Sense Ahead 1673 1676 Home   ; state 4712
+Move 1672 1669   ; state 4713
+Flip 2 1663 1670   ; state 4720
+Flip 3 1665 1671   ; state 4730
+Sense Ahead 1677 1678 Home   ; state 4746
+Turn Right 260   ; state 4747
+Sense LeftAhead 1681 1679 Home   ; state 4750
+Sense RightAhead 1680 1681 Home   ; state 4751
+Sense Ahead 1646 1681 Home   ; state 4752
+Turn Right 262   ; state 4753
+Move 1640 1640   ; state 4774

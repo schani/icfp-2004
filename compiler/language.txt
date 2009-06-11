@@ -1,0 +1,45 @@
+A short Liesegang Grammar
+=========================
+
+expr :=
+     (nop)
+|    (label <label-name>)
+|    (goto <label-name>)
+|    (mark <i>)
+|    (mark <bit-field-name> <bit-field-value>)
+|    (unmark <i>)
+|    (unmark <bit-field-name> <bit-field-value>)
+|    (drop)
+|    (turn <lr>)
+|    (progn <expr> ...)
+|    (if <condition> <expr> <expr>)
+|    (when <condition> <expr> ...)
+|    (unless <condition> <expr> ...)
+|    (while <condition> <expr> ...)
+|    (forever <expr> ...)
+|    (with-state (<name> (<value> ...)) <expr> ...)
+|    (setq <state-name> <state-value>)
+|    (case <bit-field-name> <sense-direction> (<bit-field-value> <expr> ...) ...)
+|    (flip-case <expr> ...)
+|    <condition>
+
+condition :=
+	  (sense <direction> <sense-condition>)
+|	  (move)
+|	  (pick-up)
+|	  (flip)
+|	  (not <condition>)
+|	  (and <condition> <condition>)
+|	  (or <condition> <condition>)
+
+sense-condition :=
+		friend | foe | friend-with-food | foe-with-food
+|		food | rock | foe-marker | home | foe-home
+|		(marker <i>)
+|		(marker <bit-field-name> <bit-field-value>)
+
+; and and or use short circuit evaluation!
+
+
+nearly everywhere you can write
+       (lisp <lisp-expr>)

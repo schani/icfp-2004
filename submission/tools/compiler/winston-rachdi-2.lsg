@@ -1,0 +1,322 @@
+;;; -*- lisp -*-
+
+(require 'compiler)
+(load "macros.lsg")
+(load "direction.lsg")
+(load "winston-2.lsg")
+
+(defparameter *rachdi-fields*
+  (append *home-fields*
+	  '((food-trace (bit 3) (no yes)))))
+
+(deflsgmacro mark-home ()
+  (mark-home-direction (lisp (reverse-direction dir))))
+
+(deflsgmacro mark-home-if-allowed ()
+  (when (sense here (marker home 0))
+    (mark-home)))
+
+(deflsgmacro home-marker ()
+  (not (sense here (marker home 0))))
+
+(deflsgmacro turn-to-food-in-direction (dir-name other-dir-name dir-ahead-name other-dir-ahead-name fallback-label)
+  (cond ((sense other-dir-ahead-name food)
+	 (my-turn other-dir-name))
+	((sense ahead food)
+	 (nop))
+	((sense dir-ahead-name food)
+	 (my-turn dir-name))
+	(t
+	 (turn-around)
+	 (cond ((sense other-dir-ahead-name food)
+		(my-turn other-dir-name))
+	       ((sense ahead food)
+		(nop))
+	       ((sense dir-ahead-name food)
+		(my-turn dir-name))
+	       (t
+		(goto fallback-label))))))
+	 
+(deflsgmacro turn-to-food (fallback-label)
+  (if (flip 2)
+      (turn-to-food-in-direction left right left-ahead right-ahead fallback-label)
+      (turn-to-food-in-direction right left right-ahead left-ahead fallback-label)))
+
+(defun make-sense-food-trace-direction (sense-dir my-dir)
+  (let ((sense-dir-num (cdr (assoc sense-dir '((left-ahead . -1) (ahead . 0) (right-ahead . 1))))))
+    (when (null sense-dir-num)
+      (error "unknown sense dir ~A in correct-food-trace" sense-dir))
+    (let* ((wanted-dir (+ 3 my-dir sense-dir-num))
+	   (wanted-dir (if (> wanted-dir 6)
+			   (- wanted-dir 6)
+			   wanted-dir)))
+      `(sense ,sense-dir (marker home ,wanted-dir)))))
+
+(deflsgmacro correct-food-trace (sense-dir)
+  (and (sense sense-dir (marker food-trace yes))
+       (lisp (make-sense-food-trace-direction 'sense-dir 'dir))))
+
+;;; FIXME: randomize this!!!!!
+(deflsgmacro turn-to-food-trace (fallback-label)
+  (cond ((correct-food-trace ahead)
+	 (nop))
+	((correct-food-trace left-ahead)
+	 (my-turn left))
+	((correct-food-trace right-ahead)
+	 (my-turn right))
+	(t
+	 (my-turn left)
+	 (if (correct-food-trace left-ahead)
+	     (my-turn left)
+	     (progn
+	       (my-turn right)
+	       (my-turn right)
+	       (if (correct-food-trace right-ahead)
+		   (my-turn right)
+		   (goto fallback-label)))))))
+
+
+(deflsgmacro turn-to-home-is-left (fallback-label)
+  (progn 
+    (do-times 6 
+	      (if (and (not (sense ahead home))
+		       (sense left-ahead home))
+		  (goto done-aligning-with-home)
+		(my-turn left))
+	      )
+    (goto fallback-label)
+    (label done-aligning-with-home)))
+  
+
+;;; we are still home but looking outward
+(deflsgmacro search-for-food-trace-around-home (food-trace-found-label
+						leave-home-fallback
+						fallback-label)
+  (progn 
+    (while (not (move)) 
+      (when (flip 10)
+	(goto leave-home-fallback)))
+    (forever
+     (if (sense here (marker food-trace yes))
+	 (goto food-trace-found-label)
+       (if (flip 19)
+	   (goto fallback-label)
+	 (progn 
+	   (turn-to-home-is-left fallback-label)
+	   (while (not (move))
+	     (when (flip 10)
+	       (goto fallback-label)))))))))
+      
+  
+
+
+(defparameter *rachdi-move-randomly-then-search-for-food-prob* 30)
+(defparameter *rachdi-go-home-to-search-for-home-prob* 20)
+(defparameter *rachdi-erase-to-search-for-home-prob* 50)
+(defparameter *rachdi-leave-home-randomly-prob* 20)
+(defparameter *rachdi-search-turn-randomly-prob* 5)
+(defparameter *rachdi-move-randomly-to-search-prob* 4)
+(defparameter *rachdi-to-winston-prob* 80)
+(defparameter *rachdi-returns-home-without-food* 120)
+
+
+(defparameter *drunken-rachdi*
+  '(with-state (dir (1 2 3 4 5 6))
+
+    (corner-p i-am-winston)
+
+    (label start)
+    (progn
+      (leave-home-randomly)
+      (mark-home)
+      (goto search-for-food))
+
+
+    ;; we are home and facing the preferred direction for leaving.
+    (label restart)
+    (progn
+      (when (flip (lisp *rachdi-to-winston-prob*))
+	(goto borderliner))		;turn to winston
+      ;;; unreachable
+      (while (sense here home)
+	(unless (move)
+	  (when (flip (lisp *rachdi-leave-home-randomly-prob*))
+	    (goto start)))))
+;      (goto search-for-food))
+    
+
+    ;; does not assume that current position is marked with home.
+    ;; assumes that the current position is not home.
+    (label search-for-food)
+    (forever
+     (cond ((sense here food)
+	    (pick-up)
+	    (mark-home-if-allowed)
+	    (goto go-home-and-mark))
+	   ((sense here (marker food-trace yes))
+	    (goto follow-food))
+	   (t
+	    (mark-home-if-allowed)
+	    (when (flip (lisp *rachdi-returns-home-without-food* ))
+	      (goto go-home-without-food))
+	    (forever
+	     (when (flip (lisp *rachdi-search-turn-randomly-prob*))
+	       (turn-once-randomly))
+	     (if (move)
+		 (if (sense here home)
+		     (goto start)
+		     (goto finished-search-move))
+		 (when (sense ahead rock)
+		   (turn-once-randomly))))
+	    (label finished-search-move))))
+
+
+    ;; assumes that the current position contains a home marker.
+    (label go-home-without-food)
+    (forever
+     (when (sense here home)
+       (turn-around)
+       (search-for-food-trace-around-home follow-food start search-for-food))
+     (turn-home check-for-home)
+     (while (not (move))
+       (when (flip (lisp *rachdi-go-home-to-search-for-home-prob*))
+	 (goto search-for-home)))
+     (when (and (sense here food)
+		(and (not (sense here home))
+		     (home-marker)))
+       (pick-up)
+       (goto go-home-and-mark))
+     (when (sense here (marker food-trace yes))
+       (goto follow-food))
+     )
+
+    ;; assumes that the current position contains a home marker.
+    (label go-home)
+    (forever
+     (turn-home check-for-home)
+     (while (not (move))
+       (when (flip (lisp *rachdi-go-home-to-search-for-home-prob*))
+	 (goto search-for-home)))
+     (when (and (sense here food)
+		(and (not (sense here home))
+		     (home-marker)))
+       (goto go-home-and-mark)))
+    
+
+    ;; must mark the current position with food as well.  we can
+    ;; assume that the current position is marked with home.
+    (label go-home-and-mark)
+    (forever
+     (turn-home check-for-home)
+     (mark food-trace yes)
+     (while (not (move))
+       (when (flip (lisp *rachdi-go-home-to-search-for-home-prob*))
+	 (goto search-for-home))))
+
+
+    ;; we assume nothing
+    (label go-home-and-erase)
+    (forever
+     (mark food-trace no)
+     (when (sense here home)
+       (turn-around)
+       (search-for-food-trace-around-home follow-food start search-for-food))
+     (turn-home check-for-home)
+     (while (not (move))
+       (when (flip (lisp *rachdi-erase-to-search-for-home-prob*))
+	 (goto search-for-home))))
+
+
+    ;; either we are home, or we have lost our trace.
+    (label check-for-home)
+    (if (sense here home)
+	(progn
+	  (drop)
+	  (turn-around)
+	  (goto restart))
+	(goto search-for-home))
+
+
+    ;; assumes that the current position is not marked with home.
+    (label search-for-home)
+    (progn
+      (turn-once-randomly)
+      (forever
+       (if (move)
+	   (cond ((home-marker)
+		  (goto go-home))
+		 ((sense here home)
+		  (drop)
+		  (goto start))
+		 (t
+	          (when (flip (lisp *rachdi-search-turn-randomly-prob*))
+		    (turn-once-randomly))))
+	   (turn-once-randomly))))
+
+
+    ;; we assume there's a home marker in the current position.
+    (label move-randomly-then-search-for-food)
+    (forever
+     (turn-once-randomly)
+     (if (move)
+	 (if (sense here home)
+	     (goto start)
+	     (progn
+	       (mark-home-if-allowed)
+	       (when (flip (lisp *rachdi-move-randomly-to-search-prob*))
+		 (goto search-for-food))))
+	 (turn-once-randomly)))
+
+
+    ;; we assume that there is a home marker on the current position.
+    (label find-food-or-erase)
+    (progn
+      (turn-to-food go-home-and-erase)
+      (forever
+       (if (move)
+	   (if (sense here home)
+	       (goto start)
+	       (progn
+		 (mark-home-if-allowed)
+		 (if (sense here food)
+		     (progn
+		       (pick-up)
+		       (goto go-home-and-mark))
+		     (goto find-food-or-erase))))
+	   (if (sense ahead food)
+	       (when (flip (lisp *rachdi-move-randomly-then-search-for-food-prob*))
+		 (goto move-randomly-then-search-for-food))
+	       (goto find-food-or-erase)))))
+
+
+    ;; we assume that there is no food on the current position, but
+    ;; there is a food trace.
+    (label follow-food)
+    (progn
+      (turn-to-food-trace find-food-or-erase)
+      (forever
+       
+       (forever
+	(if (move)
+	    (cond ((sense here food)
+		   (pick-up)
+		   (goto go-home))
+		  ((sense here (marker food-trace yes))
+		   (turn-to-food-trace find-food-or-erase)
+		   (goto follow-food-step-finished))
+		  (t
+		   ;; there's no food trace here, but there was just a
+		   ;; moment ago, so somebody deleted it, probably for
+		   ;; a reason.
+		   (goto search-for-food)))
+	    (when (flip (lisp *rachdi-move-randomly-then-search-for-food-prob*))
+	      (goto move-randomly-then-search-for-food))))
+
+       (label follow-food-step-finished)))
+
+
+    (label i-am-winston)
+    (winston-bot)
+    ))
+
+(compile-to-file *drunken-rachdi* *rachdi-fields* "winston-rachdi-2.ant")
