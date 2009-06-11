@@ -8,8 +8,8 @@ Run with
 
 	./run2.sh data/sample2.world submission/solution-1.ant submission/solution-2.ant
 
-In the visualizer, press "End", then "2", then "Space".  Other things
-you can do in the visualizer:
+In the visualizer, make the window as large as possible, press "End",
+then "2", then "Space".  Other things you can do in the visualizer:
 
        Left/right/middle mouse button	zooming/panning
        Numpad +/-		 	zooming
