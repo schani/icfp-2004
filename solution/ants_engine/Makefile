@@ -27,5 +27,5 @@ bertl_test: $(BERTL_TEST_OBJS) $(SDL_OBJS)
 	gcc $(LDFLAGS) $(BERTL_TEST_OBJS) $(SDL_OBJS) -o bertl_test
 
 clean:
-	rm -f $(OBJS) $(TXT_OBJS) $(SDL_OBJS)
+	rm -f $(OBJS) $(TXT_OBJS) $(SDL_OBJS) $(SDL_OBJS_JO)
 	rm -f ants_ascii ants_sdl ants_sdl_jo
